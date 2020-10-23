@@ -20,7 +20,22 @@ class Map extends Board {
         super()
         this.img.src = 'https://previews.123rf.com/images/yupiramos/yupiramos1802/yupiramos180210653/95218904-north-and-south-america-map-continent-vector-illustration-outline-design.jpg'
     }
-    move() {
+    scrollRight() {
+        if (this.x <= $canvas.width - this.width) return
+        this.x -= 10
+    }
+    scrollLeft() {
+        if (this.x >= 0) return
+        this.x += 10
+    }
+    scrollUp() {
+        if (this.y >= 0) return
+        this.y += 10
+
+    }
+    scrollDown() {
+        if (this.y <= -this.height + $canvas.height) return
+        this.y -= 10
 
     }
 }

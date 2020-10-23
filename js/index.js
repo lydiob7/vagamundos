@@ -5,8 +5,11 @@ const imgTraveler1 = 'https://previews.123rf.com/images/mansum007/mansum0071402/
 const imgTraveler2 = ''
 const imgTraveler3 = ''
 const traveler1 = new Traveler(imgTraveler1)
+let keys = []
 
 function update() {
+    frames += 1
+    checkKeys()
     clearCanvas()
     background.draw()
     traveler1.draw()
