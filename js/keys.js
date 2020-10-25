@@ -1,15 +1,21 @@
 function checkKeys() {
-    if (keys["ArrowLeft"]) {
+    if (keys["a"]) {
         return background.scrollLeft()
     }
-    if (keys["ArrowRight"]) {
+    if (keys["d"]) {
         return background.scrollRight()
     }
-    if (keys["ArrowUp"]) {
+    if (keys["w"]) {
         return background.scrollUp()
     }
-    if (keys["ArrowDown"]) {
+    if (keys["s"]) {
         return background.scrollDown()
+    }
+}
+
+function checkNextLevel() {
+    if (keys["ArrowDown"]) {
+        return traveller.levelUp()
     }
 }
 

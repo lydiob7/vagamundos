@@ -3,8 +3,40 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 16px;
 }
 
 h1 {
     display: inline-block;
+}
+
+#card {
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: 135px;
+    height: 450px;
+    width: 600px;
+    background-color: blue;
+}
+
+#card h2 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+
+#buttons {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#buttons .answer {
+    padding: 20px;
+    background-color: red;
+    color: white;
+    font-size: 1.3rem;
 }
