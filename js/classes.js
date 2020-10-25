@@ -54,8 +54,8 @@ class Traveller {
     }
     levelUp() {
         switch (countriesGuessed[0]) {
-            case 'canada':
-                if (background.y < -100) {
+            case 'Canadá':
+                if (background.y < countries[1].y) {
                     clearInterval(intervalLevel)
                     intervalLevel = null
                     newCard(countries[1])
@@ -63,17 +63,20 @@ class Traveller {
                     background.y--
                 }
                 break
-            case 'united states':
-                if (background.x > -75 || background.y < -300) {
+            case 'Estados Unidos':
+                if (background.x > countries[2].x && background.y < countries[2].y) {
                     clearInterval(intervalLevel)
                     intervalLevel = null
                     newCard(countries[2])
-                } else if (background.x > -80) {
+                } else if (background.x > countries[2].x) {
                     background.x += 0
                     background.y -= 1
+                } else if (background.y < countries[2].y) {
+                    background.y += 0
+                    background.x += 1
                 } else {
-                    background.x += 3
-                    background.y--
+                    background.x += 1
+                    background.y -= 1
                 }
                 break
             case 'mexico':

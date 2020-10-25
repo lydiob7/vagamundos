@@ -1,14 +1,14 @@
 function checkKeys() {
-    if (keys["a"]) {
+    if (keys["a"] && $card.style.display === 'none') {
         return background.scrollLeft()
     }
-    if (keys["d"]) {
+    if (keys["d"] && $card.style.display === 'none') {
         return background.scrollRight()
     }
-    if (keys["w"]) {
+    if (keys["w"] && $card.style.display === 'none') {
         return background.scrollUp()
     }
-    if (keys["s"]) {
+    if (keys["s"] && $card.style.display === 'none') {
         return background.scrollDown()
     }
 }

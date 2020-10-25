@@ -3,17 +3,51 @@ let frames = 0
 let keys = []
 let intervalLevel
 let countries = [{
-    name: 'canada',
-    capital: 'ottawa',
-    wrongAnswers: ['montreal', 'toronto']
+    name: 'Canadá',
+    capital: 'Ottawa',
+    wrongAnswers: ['Montreal', 'Toronto'],
+    x: -400,
+    y: 0
 }, {
-    name: 'united states',
-    capital: 'washington dc',
-    wrongAnswers: ['new york', 'chicago']
+    name: 'Estados Unidos',
+    capital: 'Washington DC',
+    wrongAnswers: ['Nueva York', 'Chicago'],
+    x: -400,
+    y: -100
 }, {
-    name: 'mexico',
-    capital: 'mexico df',
-    wrongAnswers: ['guadalajara', 'oaxaca']
+    name: 'México',
+    capital: 'Ciudad de México',
+    wrongAnswers: ['Guadalajara', 'Monterrey'],
+    x: -80,
+    y: -300
+}, {
+    name: 'Bélice',
+    capital: 'Belmopán',
+    wrongAnswers: ['Ciudad de Bélice', 'Corozal']
+}, {
+    name: 'costa rica',
+    capital: 'San José',
+    wrongAnswers: ['Alajuela', 'Cartago']
+}, {
+    name: 'El Salvador',
+    capital: 'San Salvador',
+    wrongAnswers: ['Ahuachapán', 'San Miguel']
+}, {
+    name: 'Guatemala',
+    capital: 'Ciudad de Guatemala',
+    wrongAnswers: ['Huehuetenango', 'Alta Verapaz']
+}, {
+    name: 'Honduras',
+    capital: 'Tegucigalpa',
+    wrongAnswers: ['San Pedro Sula', 'La Ceiba']
+}, {
+    name: 'Nicaragua',
+    capital: 'Managua',
+    wrongAnswers: ['León', 'Masaya']
+}, {
+    name: 'Panamá',
+    capital: 'Ciudad de Panamá',
+    wrongAnswers: ['Chitre', 'Las Tablas']
 }]
 let countriesGuessed = []
 let lives = 5
