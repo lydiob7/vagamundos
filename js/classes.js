@@ -110,8 +110,9 @@ class Card {
             }
             $country.innerHTML = this.country
             $answer[random].innerHTML = this.answer
-            $answer[random2()].innerHTML = this.wrongAnswers[0]
-            $answer[random3()].innerHTML = this.wrongAnswers[1]
+            randomArray()
+            $answer[random2()].innerHTML = wrongAnswers[0]
+            $answer[random3()].innerHTML = wrongAnswers[1]
             $card.style.display = 'flex'
             $answer[random].onclick = () => {
                 countriesGuessed.unshift(this.country)
@@ -148,11 +149,12 @@ class Card {
             }
             $country.innerHTML = this.country
             $answerLevel2[random].innerHTML = this.answer
-            $answerLevel2[random2()].innerHTML = this.wrongAnswers[0]
-            $answerLevel2[random3()].innerHTML = this.wrongAnswers[1]
-            $answerLevel2[random4()].innerHTML = this.wrongAnswers[2]
-            $answerLevel2[random5()].innerHTML = this.wrongAnswers[3]
-            $answerLevel2[random6()].innerHTML = this.wrongAnswers[4]
+            randomArray()
+            $answerLevel2[random2()].innerHTML = wrongAnswers[0]
+            $answerLevel2[random3()].innerHTML = wrongAnswers[1]
+            $answerLevel2[random4()].innerHTML = wrongAnswers[2]
+            $answerLevel2[random5()].innerHTML = wrongAnswers[3]
+            $answerLevel2[random6()].innerHTML = wrongAnswers[4]
             $card.style.display = 'flex'
             $buttonsLevel1.style.display = 'none'
             $buttonsLevel2.style.display = 'flex'
