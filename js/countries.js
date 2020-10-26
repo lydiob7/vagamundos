@@ -2,20 +2,20 @@ let countries = [{
     name: 'Canadá',
     capital: 'Ottawa',
     level: 1,
-    x: -400,
-    y: 0
+    x: -1300,
+    y: -950
 }, {
     name: 'Estados Unidos',
     capital: 'Washington DC',
     level: 1,
-    x: -400,
-    y: -100
+    x: -1280,
+    y: -1100
 }, {
     name: 'México',
     capital: 'Ciudad de México',
     level: 1,
-    x: -80,
-    y: -300
+    x: -900,
+    y: -1250
 }, {
     name: 'Bahamas',
     capital: 'Nasáu',

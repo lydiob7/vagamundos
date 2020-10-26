@@ -37,6 +37,7 @@ function next() {
 
 function nextCountry() {
     checkNextLevel()
+    showArrowNext()
 }
 
 function newCard(country) {

@@ -1,11 +1,11 @@
 class Map {
     constructor() {
-        this.x = -400
-        this.y = 0
-        this.width = $canvas.width * 2
-        this.height = $canvas.height * 3
+        this.x = countries[0].x
+        this.y = countries[0].y
+        this.width = 2398
+        this.height = 1799
         this.img = new Image()
-        this.img.src = 'https://upload.wikimedia.org/wikipedia/commons/2/21/Americas_satellite_map.jpg'
+        this.img.src = '../images/americadelnorte.png'
         this.img.onload = () => {
             this.draw()
         }
