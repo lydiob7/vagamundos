@@ -1,4 +1,5 @@
 body {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,15 +29,39 @@ h1 {
     font-size: 2rem;
 }
 
-#buttons {
+#buttons-level1 {
     width: 80%;
     display: flex;
     justify-content: space-evenly;
 }
 
-#buttons .answer {
+.answer-btn {
+    max-height: 70px;
+    width: 150px;
+    margin: 0 10px;
     padding: 20px;
     background-color: red;
     color: white;
     font-size: 1.3rem;
+}
+
+#buttons-level2 {
+    display: none;
+    height: 200px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#lives {
+    display: block;
+    position: absolute;
+    top: 120px;
+    left: 150px;
+}
+
+#lives img {
+    display: inline-block;
+    height: 30px;
+    width: auto;
+    margin-left: 10px;
 }

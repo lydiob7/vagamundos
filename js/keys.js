@@ -11,11 +11,20 @@ function checkKeys() {
     if (keys["s"] && $card.style.display === 'none') {
         return background.scrollDown()
     }
+    if (keys["Enter"] && $card.style.display === 'none') {
+        let countriesNames = countries.map(c => c.name)
+        countriesNames.forEach((name, index) => {
+            if (locationTraveller === name) {
+                newCard(countries[index])
+            }
+        })
+    }
+
 }
 
 function checkNextLevel() {
     if (keys["ArrowDown"]) {
-        return traveller.levelUp()
+        traveller.levelUp()
     }
 }
 

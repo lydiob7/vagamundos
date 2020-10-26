@@ -53,34 +53,37 @@ class Traveller {
         ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
     }
     levelUp() {
-        switch (countriesGuessed[0]) {
-            case 'Canadá':
-                if (background.y < countries[1].y) {
-                    clearInterval(intervalLevel)
-                    intervalLevel = null
-                    newCard(countries[1])
-                } else {
-                    background.y--
-                }
-                break
-            case 'Estados Unidos':
-                if (background.x > countries[2].x && background.y < countries[2].y) {
-                    clearInterval(intervalLevel)
-                    intervalLevel = null
-                    newCard(countries[2])
-                } else if (background.x > countries[2].x) {
-                    background.x += 0
-                    background.y -= 1
-                } else if (background.y < countries[2].y) {
-                    background.y += 0
-                    background.x += 1
-                } else {
-                    background.x += 1
-                    background.y -= 1
-                }
-                break
-            case 'mexico':
-                break
+        let destinationX
+        let destinationY
+        countries.forEach(c => {
+            if (c.name === nextDestination) {
+                destinationX = c.x
+                destinationY = c.y
+            }
+        })
+        if (destinationX === background.x && destinationY === background.y) {
+            clearInterval(intervalLevel)
+            intervalLevel = null
+            locationTraveller = nextDestination
+        }
+        if (destinationX === background.x) {
+            background.x += 0
+
+        }
+        if (destinationY === background.y) {
+            background.y += 0
+        }
+        if (destinationX < background.x) {
+            background.x -= 1
+        }
+        if (destinationY < background.y) {
+            background.y -= 1
+        }
+        if (destinationX > background.x) {
+            background.x += 1
+        }
+        if (destinationY > background.y) {
+            background.y += 1
         }
     }
 }
@@ -90,30 +93,81 @@ class Card {
         this.country = country.name
         this.answer = country.capital
         this.wrongAnswers = country.wrongAnswers
+        this.level = country.level
     }
     show() {
-        let random = Math.floor(Math.random() * 3)
+        if (this.level === 1) {
+            let random = Math.floor(Math.random() * 3)
 
-        function random2() {
-            if (random === 0) return 1
-            return 0
-        }
+            function random2() {
+                if (random === 0) return 1
+                return 0
+            }
 
-        function random3() {
-            if (random === 2) return 1
-            return 2
+            function random3() {
+                if (random === 2) return 1
+                return 2
+            }
+            $country.innerHTML = this.country
+            $answer[random].innerHTML = this.answer
+            $answer[random2()].innerHTML = this.wrongAnswers[0]
+            $answer[random3()].innerHTML = this.wrongAnswers[1]
+            $card.style.display = 'flex'
+            $answer[random].onclick = () => {
+                countriesGuessed.unshift(this.country)
+                next()
+            }
+            $answer[random2()].onclick = looseLife
+            $answer[random3()].onclick = looseLife
+        } else if (this.level === 2) {
+            let random = Math.floor(Math.random() * 6)
+
+            function random2() {
+                if (random === 1) return 0
+                return 1
+            }
+
+            function random3() {
+                if (random === 2) return 0
+                return 2
+            }
+
+            function random4() {
+                if (random === 3) return 0
+                return 3
+            }
+
+            function random5() {
+                if (random === 4) return 0
+                return 4
+            }
+
+            function random6() {
+                if (random === 5) return 0
+                return 5
+            }
+            $country.innerHTML = this.country
+            $answerLevel2[random].innerHTML = this.answer
+            $answerLevel2[random2()].innerHTML = this.wrongAnswers[0]
+            $answerLevel2[random3()].innerHTML = this.wrongAnswers[1]
+            $answerLevel2[random4()].innerHTML = this.wrongAnswers[2]
+            $answerLevel2[random5()].innerHTML = this.wrongAnswers[3]
+            $answerLevel2[random6()].innerHTML = this.wrongAnswers[4]
+            $card.style.display = 'flex'
+            $buttonsLevel1.style.display = 'none'
+            $buttonsLevel2.style.display = 'flex'
+            $answerLevel2[random].onclick = () => {
+                countriesGuessed.unshift(this.country)
+                next()
+            }
+            $answerLevel2[random2()].onclick = looseLife
+            $answerLevel2[random3()].onclick = looseLife
+            $answerLevel2[random4()].onclick = looseLife
+            $answerLevel2[random5()].onclick = looseLife
+            $answerLevel2[random6()].onclick = looseLife
+        } else if (this.level === 3) {
+
         }
-        $country.innerHTML = this.country
-        $answer[random].innerHTML = this.answer
-        $answer[random2()].innerHTML = this.wrongAnswers[0]
-        $answer[random3()].innerHTML = this.wrongAnswers[1]
-        $card.style.display = 'flex'
-        $answer[random].onclick = () => {
-            countriesGuessed.unshift(this.country)
-            next()
-        }
-        $answer[random2()].onclick = looseLife
-        $answer[random3()].onclick = looseLife
     }
     hide() {
         $card.style.display = 'none'
