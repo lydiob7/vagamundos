@@ -39,7 +39,7 @@ class Map {
 
 class Traveller {
     constructor(player) {
-        this.x = 240
+        this.x = 475
         this.y = 150
         this.width = 250
         this.height = 150
@@ -62,6 +62,7 @@ class Traveller {
             }
         })
         if (destinationX === background.x && destinationY === background.y) {
+            hideArrowNext()
             clearInterval(intervalLevel)
             intervalLevel = null
             locationTraveller = nextDestination

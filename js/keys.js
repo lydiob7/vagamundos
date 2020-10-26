@@ -12,6 +12,7 @@ function checkKeys() {
         return background.scrollDown()
     }
     if (keys["Enter"] && $card.style.display === 'none') {
+        hideNextQuestion()
         let countriesNames = countries.map(c => c.name)
         countriesNames.forEach((name, index) => {
             if (locationTraveller === name) {

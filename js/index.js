@@ -33,11 +33,11 @@ function next() {
     if (intervalLevel) return
     intervalLevel = setInterval(nextCountry, 1000 / 60)
     card.hide()
+    showArrowNext()
 }
 
 function nextCountry() {
     checkNextLevel()
-    showArrowNext()
 }
 
 function newCard(country) {
@@ -54,7 +54,7 @@ function looseLife() {
 }
 
 function gameOver() {
-    console.log('game over')
+    $gameOver.style.display = 'flex'
     clearInterval(intervalId)
 }
 
@@ -64,6 +64,19 @@ function checkNextDestination() {
             nextDestination = countries[index + 1].name
         }
     })
+}
+
+function showArrowNext() {
+    $arrowNext.style.display = 'block'
+}
+
+function hideArrowNext() {
+    $arrowNext.style.display = 'none'
+    $nextQuestion.style.display = 'block'
+}
+
+function hideNextQuestion() {
+    $nextQuestion.style.display = 'none'
 }
 
 newCard(countries[0])
