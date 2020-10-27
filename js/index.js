@@ -6,6 +6,7 @@ let countriesGuessed = []
 let locationTraveller = 'Canadá'
 let nextDestination
 let lives = 5
+let level = 1
 const background = new Map()
 let card
 let imgTraveller1 = '../images/traveller1.png'
@@ -15,6 +16,7 @@ function update() {
     frames += 1
     checkKeys()
     checkNextDestination()
+    checkProgress()
     clearCanvas()
     background.draw()
     traveller.draw()
@@ -77,6 +79,17 @@ function hideArrowNext() {
 
 function hideNextQuestion() {
     $nextQuestion.style.display = 'none'
+}
+
+function checkProgress() {
+    if (countriesGuessed[0] === 'México' && level !== 2) {
+        background.img.src = '../images/americacentral.png'
+        background.x = -40
+        background.y = -400
+        traveller.x = 475
+        traveller.y = 150
+        level = 2
+    }
 }
 
 newCard(countries[0])

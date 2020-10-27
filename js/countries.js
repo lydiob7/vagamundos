@@ -20,32 +20,32 @@ let countries = [{
     name: 'Bahamas',
     capital: 'Nasáu',
     level: 2,
-    x: -350,
-    y: -300
+    x: -980,
+    y: -320
 }, {
     name: 'Cuba',
     capital: 'La Habana',
     level: 2,
-    x: -350,
-    y: -300
+    x: -840,
+    y: -416
 }, {
     name: 'Jamaica',
     capital: 'Kingston',
     level: 2,
-    x: -350,
-    y: -300
+    x: -990,
+    y: -640
 }, {
     name: 'Haití',
     capital: 'Puerto Príncipe',
     level: 2,
-    x: -350,
-    y: -300
+    x: -1190,
+    y: -630
 }, {
     name: 'República Dominicana',
     capital: 'Santo Domingo',
     level: 2,
-    x: -350,
-    y: -300
+    x: -1140,
+    y: -680
 }, {
     name: 'Puerto Rico',
     capital: 'San Juan',

@@ -62,6 +62,15 @@ class Traveller {
             }
         })
         if (destinationX === background.x && destinationY === background.y) {
+            if (locationTraveller === 'Estados Unidos') {
+                if (traveller.y > 420) {
+                    hideArrowNext()
+                    clearInterval(intervalLevel)
+                    intervalLevel = null
+                    locationTraveller = nextDestination
+                }
+                return traveller.y += 2
+            }
             hideArrowNext()
             clearInterval(intervalLevel)
             intervalLevel = null
@@ -75,16 +84,16 @@ class Traveller {
             background.y += 0
         }
         if (destinationX < background.x) {
-            background.x -= 1
+            background.x -= 2
         }
         if (destinationY < background.y) {
-            background.y -= 1
+            background.y -= 2
         }
         if (destinationX > background.x) {
-            background.x += 1
+            background.x += 2
         }
         if (destinationY > background.y) {
-            background.y += 1
+            background.y += 2
         }
     }
 }
@@ -121,7 +130,7 @@ class Card {
             }
             $answer[random2()].onclick = looseLife
             $answer[random3()].onclick = looseLife
-        } else if (this.level === 2) {
+        } else if (this.level === 2 || this.level === 3) {
             let random = Math.floor(Math.random() * 6)
 
             function random2() {
