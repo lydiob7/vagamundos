@@ -12,12 +12,13 @@ const $arrowNext = document.querySelector('#arrow-next')
 const $nextQuestion = document.querySelector('#next-question')
 const $gameOver = document.querySelector('#game-over')
 
-var $button = document.querySelector('#startbutton')
-var $cover = document.querySelector('.container-cover')
-var $rules = document.querySelector('.container-rules')
-$button.onclick = changeSection
-
-function changeSection() {
-    $cover.style.display = 'none'
-}
-console.log('Hola')
+const $button = document.querySelector(`#startbutton`)
+const $cover = document.querySelector(`.container-cover`)
+const $secondButton = document.querySelector(`#secondbutton`)
+const $rules = document.querySelector(`.container-rules`)
+const $instructionsButton = document.querySelector('#instructionsbutton')
+const $thirdButton = document.querySelector(`#thirdbutton`)
+const $players = document.querySelector(`.container-characters`)
+const $containerGame = document.querySelector(`#container-game`)
+const texto = "Con una superficie de más de 43 316 000 km², es la segunda masa de tierra más grande del globo, cubriendo el 8 % de la superficie total del planeta y el 28,4 % de la tierra emergida, y además concentrando cerca del 12,5 % de la población humana. Debido a su gran tamaño y sus características geográficas, en algunas culturas, América se divide tradicionalmente en América del Norte, América Central, y América del Sur.";
+const texto2 = `Inspirad@s en historias de aventurer@s, nuestr@s vagamund@s quieren recorrer el continente americano y finalizar su periplo en el "fin del mundo". ¿Te animas a ayudarl@s? Sólo necesitan saber las capitales.`

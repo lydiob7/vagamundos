@@ -1,5 +1,6 @@
 let intervalId
 let intervalLevel
+let timerMaquina
 let frames = 0
 let keys = []
 let countriesGuessed = []
@@ -11,6 +12,52 @@ const background = new Map()
 let card
 let imgTraveller1 = '../images/traveller1.png'
 const traveller = new Traveller(imgTraveller1)
+
+$button.onclick = changeSection
+$instructionsButton.onclick = showInstructions
+$secondButton.onclick = changeSection2
+$thirdButton.onclick = changeSection3
+
+function changeSection() {
+    $cover.style.display = `none`
+    $rules.style.display = `flex`
+    maquina("#maquina-de-escribir", texto, 50);
+}
+
+function showInstructions() {
+    $instructionsButton.style.display = 'none'
+    $secondButton.style.display = 'block'
+    clearInterval(timerMaquina)
+    maquina("#maquina-de-escribir", texto2, 50)
+}
+
+function changeSection2() {
+    $rules.style.display = `none`
+    $players.style.display = `flex`
+}
+
+function changeSection3() {
+    $players.style.display = `none`
+    $containerGame.style.display = 'flex'
+
+}
+
+function maquina(contenedor, texto, intervalo) {
+    longitud = texto.length;
+    cnt = document.querySelector(contenedor);
+    cnt.innerHTML = ''
+    var i = 0;
+    timerMaquina = setInterval(function() {
+        cnt.innerHTML = cnt.innerHTML.substr(0, cnt.innerHTML.length - 1) + texto.charAt(i) + "_";
+        if (i >= longitud) {
+            return clearInterval(timer);
+            cnt.innerHTML = cnt.innerHTML.substr(0, longitud);
+            return true;
+        } else {
+            i++;
+        }
+    }, intervalo);
+};
 
 function update() {
     frames += 1

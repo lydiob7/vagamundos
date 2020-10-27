@@ -13,7 +13,6 @@ body {
     background-color: white;
     margin: 0;
     height: 100%;
-    /* overflow: hidden */
 }
 
 .container-cover,
@@ -35,6 +34,7 @@ body {
     justify-content: space-between;
     background-color: #F5F0DA;
     padding-bottom: 50px;
+    margin-top: 20px;
     position: relative;
 }
 
@@ -90,7 +90,17 @@ h1 {
 }
 
 #container-game {
+    position: relative;
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+#canvas {
+    border: 3px solid brown;
+    box-sizing: border-box;
 }
 
 #card {
@@ -99,7 +109,7 @@ h1 {
     justify-content: space-evenly;
     align-items: center;
     position: absolute;
-    top: 135px;
+    top: 85px;
     height: 500px;
     width: 700px;
     background-image: url('../images/tarjetas.png');
@@ -140,7 +150,7 @@ h1 {
 #lives {
     display: block;
     position: absolute;
-    top: 120px;
+    top: 70px;
     left: 170px;
 }
 
@@ -191,7 +201,7 @@ h1 {
     width: 1200px;
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
-    top: 80px;
+    top: 50px;
 }
 
 #game-over h2 {
