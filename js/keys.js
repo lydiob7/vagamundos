@@ -15,7 +15,7 @@ function checkKeys() {
         hideNextQuestion()
         let countriesNames = countries.map(c => c.name)
         countriesNames.forEach((name, index) => {
-            if (locationTraveller === name) {
+            if (locationTraveller === name && countriesGuessed[0] !== name) {
                 newCard(countries[index])
             }
         })
