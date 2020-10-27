@@ -10,7 +10,7 @@ let lives = 5
 let level = 1
 const background = new Map()
 let card
-let imgTraveller1 = '../images/traveller1.png'
+let imgTraveller1 = '../images/vagamundo.png'
 const traveller = new Traveller(imgTraveller1)
 
 $button.onclick = changeSection
@@ -137,6 +137,13 @@ function checkProgress() {
         traveller.x = 475
         traveller.y = 150
         level = 2
+    } else if (countriesGuessed[0] === 'Panamá' && level !== 3) {
+        background.img.src = '../images/americadelsur.jpg'
+        background.x = 0
+        background.y = 0
+        traveller.x = 475
+        traveller.y = 150
+        level = 3
     }
 }
 

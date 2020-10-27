@@ -42,7 +42,7 @@ class Traveller {
         this.x = 475
         this.y = 150
         this.width = 250
-        this.height = 150
+        this.height = 160
         this.img = new Image()
         this.img.src = player
         this.img.onload = () => {

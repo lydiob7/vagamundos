@@ -56,20 +56,20 @@ let countries = [{
     name: 'San Cristóbal y Nieves',
     capital: 'Basseterre',
     level: 2,
-    x: -1540,
-    y: -730
+    x: -1530,
+    y: -690
 }, {
     name: 'Antigua y Barbuda',
     capital: 'Saint John',
     level: 2,
-    x: -1600,
-    y: -730
+    x: -1580,
+    y: -690
 }, {
     name: 'Dominica',
     capital: 'Roseau',
     level: 2,
-    x: -1616,
-    y: -820
+    x: -1600,
+    y: -790
 }, {
     name: 'Santa Lucía',
     capital: 'Castries',
@@ -104,49 +104,49 @@ let countries = [{
     name: 'Bélice',
     capital: 'Belmopán',
     level: 2,
-    x: -586,
+    x: -570,
     y: -680
-}, {
-    name: 'Costa Rica',
-    capital: 'San José',
-    level: 2,
-    x: -80,
-    y: -300
-}, {
-    name: 'El Salvador',
-    capital: 'San Salvador',
-    level: 2,
-    x: -80,
-    y: -300
 }, {
     name: 'Guatemala',
     capital: 'Ciudad de Guatemala',
     level: 2,
-    x: -80,
-    y: -300
+    x: -494,
+    y: -830
+}, {
+    name: 'El Salvador',
+    capital: 'San Salvador',
+    level: 2,
+    x: -544,
+    y: -860
 }, {
     name: 'Honduras',
     capital: 'Tegucigalpa',
     level: 2,
-    x: -80,
-    y: -300
+    x: -634,
+    y: -840
 }, {
     name: 'Nicaragua',
     capital: 'Managua',
     level: 2,
-    x: -80,
-    y: -300
+    x: -680,
+    y: -940
+}, {
+    name: 'Costa Rica',
+    capital: 'San José',
+    level: 2,
+    x: -740,
+    y: -1040
 }, {
     name: 'Panamá',
     capital: 'Ciudad de Panamá',
     level: 2,
-    x: -80,
-    y: -300
+    x: -910,
+    y: -1090
 }, {
     name: 'Colombia',
     capital: 'Bogotá',
     level: 3,
-    x: -400,
+    x: -50,
     y: 0
 }, {
     name: 'Venezuela',
