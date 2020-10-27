@@ -4,19 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css ">
     <title>Vagamundos</title>
 </head>
 
 <body>
-    <h1>Vagamundos</h1>
+    <h1></h1>
+    <div class="container-cover">
+        <img id="portada" src="images/first.png" alt="cover">
+        <button class="btn" id="startbutton">¡VAMOS!</button>
 
-    <canvas id="canvas"></canvas>
+    </div>
 
-    <script src="canvas.js"></script>
-    <script src="keys.js"></script>
-    <script src="helpers.js"></script>
-    <script src="classes.js"></script>
-    <script src="index.js"></script>
+    <div class="container-rules">
+        <img id="introduction" src="images/introduction.png" alt="vagamundo">
+        <div id="maquina-de-escribir"></div>
+        <button class="btn" id="instructionsbutton">INSTRUCCIONES</button>
+        <button class="btn" id="secondbutton">ELEGI TU VIAJERO</button>
+    </div>
+
+    <div class="container-characters">
+        <img id="vagamundo1" src="images/vagamundo.png " alt="vagamundo">
+        <button class="btn" id="thirdbutton">AL FIN DEL MUNDO</button>
+    </div>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
