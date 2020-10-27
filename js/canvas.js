@@ -11,3 +11,13 @@ const $hearts = document.querySelectorAll('#lives img')
 const $arrowNext = document.querySelector('#arrow-next')
 const $nextQuestion = document.querySelector('#next-question')
 const $gameOver = document.querySelector('#game-over')
+
+var $button = document.querySelector('#startbutton')
+var $cover = document.querySelector('.container-cover')
+var $rules = document.querySelector('.container-rules')
+$button.onclick = changeSection
+
+function changeSection() {
+    $cover.style.display = 'none'
+}
+console.log('Hola')

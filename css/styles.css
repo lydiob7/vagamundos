@@ -1,4 +1,4 @@
-body {
+/* body {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -7,10 +7,55 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     background-color: #6db3d7;
+} */
+
+body {
+    background-color: white;
+    margin: 0;
+    height: 100%;
+    overflow: hidden
+}
+
+.container-cover {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+
+#portada {
+    width: 1000px;
+}
+
+#startbutton {
+    background-color: #D49F0B;
+    font-family: ‘Salsa’, cursive;
+    width: 100px;
+    height: 50px;
+    color: black;
+    border-radius: 1px;
+    text-decoration: none;
+    font-size: 19px;
+    transition-duration: 0.5s;
+    border: 0.4px #D49F0B;
+    cursor: pointer;
+    outline-color: white;
+    transition: all 0.5s cubic-bezier(.82, .28, .83, .67);
+}
+
+#startbutton:hover {
+    outline-offset: 20px;
+    text-shadow: 3px 3px 4px white;
+    transform: scale(1.9);
 }
 
 h1 {
     display: inline-block;
+}
+
+#container-game {
+    /* display: none; */
 }
 
 #card {
@@ -26,6 +71,7 @@ h1 {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    /* #f5f0da */
 }
 
 #card h2 {

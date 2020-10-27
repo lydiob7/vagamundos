@@ -23,6 +23,7 @@ function update() {
 }
 
 function clearCanvas() {
+    ctx.fillStyle = '#6db3d7'
     ctx.fillRect(-$canvas.width, -$canvas.height * 2, $canvas.width * 3, $canvas.height * 5)
 }
 

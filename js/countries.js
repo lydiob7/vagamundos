@@ -32,7 +32,7 @@ let countries = [{
     name: 'Jamaica',
     capital: 'Kingston',
     level: 2,
-    x: -990,
+    x: -1000,
     y: -640
 }, {
     name: 'Haití',
@@ -44,68 +44,68 @@ let countries = [{
     name: 'República Dominicana',
     capital: 'Santo Domingo',
     level: 2,
-    x: -1140,
-    y: -680
+    x: -1240,
+    y: -580
 }, {
     name: 'Puerto Rico',
     capital: 'San Juan',
     level: 2,
-    x: -350,
-    y: -300
+    x: -1420,
+    y: -636
 }, {
     name: 'San Cristóbal y Nieves',
     capital: 'Basseterre',
     level: 2,
-    x: -350,
-    y: -300
+    x: -1540,
+    y: -730
 }, {
     name: 'Antigua y Barbuda',
     capital: 'Saint John',
     level: 2,
-    x: -350,
-    y: -300
+    x: -1600,
+    y: -730
 }, {
     name: 'Dominica',
     capital: 'Roseau',
     level: 2,
-    x: -350,
-    y: -300
+    x: -1616,
+    y: -820
 }, {
     name: 'Santa Lucía',
     capital: 'Castries',
     level: 2,
-    x: -350,
-    y: -300
+    x: -1616,
+    y: -850
 }, {
     name: 'Barbados',
     capital: 'Bridgetown',
     level: 2,
-    x: -350,
-    y: -300
+    x: -1710,
+    y: -910
 }, {
     name: 'San Vicente y las Granadinas',
     capital: 'Kingstown',
     level: 2,
-    x: -350,
-    y: -300
+    x: -1610,
+    y: -920
 }, {
     name: 'Granada',
     capital: 'Saint George',
     level: 2,
-    x: -350,
-    y: -300
+    x: -1610,
+    y: -940
 }, {
     name: 'Trinidad y Tobago',
     capital: 'Puerto España',
     level: 2,
-    x: -350,
-    y: -300
+    x: -1610,
+    y: -1010
 }, {
     name: 'Bélice',
     capital: 'Belmopán',
     level: 2,
-    x: -200,
-    y: -370
+    x: -586,
+    y: -680
 }, {
     name: 'Costa Rica',
     capital: 'San José',
