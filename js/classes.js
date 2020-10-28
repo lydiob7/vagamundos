@@ -1,3 +1,7 @@
+// Classes for the objects in the game
+
+// MAP
+
 class Map {
     constructor() {
         this.x = countries[0].x
@@ -36,6 +40,8 @@ class Map {
 
     }
 }
+
+// PLAYER
 
 class Traveller {
     constructor(player) {
@@ -97,6 +103,8 @@ class Traveller {
         }
     }
 }
+
+// CARDS
 
 class Card {
     constructor(country) {

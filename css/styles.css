@@ -1,58 +1,14 @@
-/* body {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    background-color: #6db3d7;
-} */
+/* This code was writen by Gabriela Polanco Ferreyra and Tomas Scattini in October 2020 */
+
+
+/* General styles */
 
 body {
     background-color: white;
     margin: 0;
     height: 100%;
-}
-
-.container-cover,
-.container-rules,
-.container-characters {
-    display: flex;
-    flex-direction: column;
-    width: 1200px;
-    height: 600px;
-    align-items: center;
-    margin: 0 auto;
-}
-
-#portada {
-    width: 1000px;
-}
-
-.container-rules {
-    justify-content: space-between;
-    background-color: #F5F0DA;
-    padding-bottom: 50px;
-    margin-top: 20px;
-    position: relative;
-}
-
-#maquina-de-escribir {
-    width: 600px;
-    height: 400px;
-    position: absolute;
-    left: 600px;
-    top: 50px;
-    padding: 20px;
-    box-sizing: border-box;
-    font-size: 25px;
-    text-align: center;
-    font-family: "Special Elite";
-}
-
-#vagamundo1 {
-    height: 100%;
+    /* font-size: 16px;
+    background-color: #6db3d7; */
 }
 
 .btn {
@@ -76,40 +32,101 @@ body {
     transform: scale(1.9);
 }
 
-#secondbutton {
-    display: none;
+.container-cover,
+.container-rules,
+.container-characters {
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    height: 600px;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .container-rules,
-.container-characters {
+.container-characters,
+#secondbutton,
+#container-game,
+#card,
+#arrow-next,
+#next-question,
+#game-over {
     display: none;
 }
 
-h1 {
-    display: inline-block;
+
+/* Game cover */
+
+#portada {
+    width: 1000px;
 }
+
+
+/* Rules */
+
+.container-rules {
+    justify-content: space-between;
+    background-color: #F5F0DA;
+    padding-bottom: 50px;
+    margin-top: 20px;
+    position: relative;
+}
+
+#maquina-de-escribir {
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    left: 600px;
+    top: 50px;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 25px;
+    text-align: center;
+    font-family: "Special Elite";
+}
+
+
+/* Characters */
+
+#vagamundo1 {
+    height: 100%;
+}
+
+
+/* Game */
 
 #container-game {
+    /* display: flex; */
     position: relative;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding-top: 50px;
+    padding: 0 50px;
+    background-image: url('../images/papiro.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
 #canvas {
-    border: 3px solid brown;
+    border: 1px solid brown;
     box-sizing: border-box;
 }
 
+#objects-over-canvas {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    width: 1000px;
+    /* background-color: green; */
+}
+
 #card {
-    display: none;
+    /* display: flex; */
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    position: absolute;
-    top: 85px;
     height: 500px;
     width: 700px;
     background-image: url('../images/tarjetas.png');
@@ -124,12 +141,6 @@ h1 {
     font-size: 2rem;
 }
 
-#buttons-level1 {
-    width: 80%;
-    display: flex;
-    justify-content: space-evenly;
-}
-
 .answer-btn {
     max-height: 70px;
     width: 150px;
@@ -140,6 +151,17 @@ h1 {
     font-size: 1.3rem;
 }
 
+.answer-btn:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+#buttons-level1 {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
 #buttons-level2 {
     display: none;
     height: 200px;
@@ -147,11 +169,23 @@ h1 {
     flex-wrap: wrap;
 }
 
+
+/* Objects outside canvas */
+
+#objects-outside-canvas {
+    position: relative;
+    width: 350px;
+    height: 600px;
+    margin-left: 20px;
+}
+
+
+/* Lives */
+
 #lives {
     display: block;
-    position: absolute;
-    top: 70px;
-    left: 170px;
+    top: 0;
+    left: 10px;
 }
 
 #lives img {
@@ -161,23 +195,20 @@ h1 {
     margin-left: 2px;
 }
 
+
+/* Instructions and signs */
+
 #arrow-next,
 #next-question {
-    display: none;
-    position: absolute;
-    bottom: 0;
+    top: 100px;
     font-size: 1.5rem;
     text-transform: uppercase;
-}
-
-#arrow-next h3 {
     text-align: center;
 }
 
 #arrow-next span {
     display: inline-block;
     position: relative;
-    transform: rotate(90deg);
     animation: down 1s infinite;
 }
 
@@ -186,7 +217,7 @@ h1 {
         top: 0;
     }
     50% {
-        top: 30px;
+        top: 10px;
     }
     100% {
         top: 0;
@@ -194,11 +225,11 @@ h1 {
 }
 
 #game-over {
-    display: none;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     height: 600px;
-    width: 1200px;
+    width: 1000px;
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 50px;

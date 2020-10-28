@@ -1,3 +1,5 @@
+// Variables
+
 let intervalId
 let intervalLevel
 let timerMaquina
@@ -12,6 +14,8 @@ const background = new Map()
 let card
 let imgTraveller1 = '../images/vagamundo.png'
 const traveller = new Traveller(imgTraveller1)
+
+// Events for the first sections
 
 $button.onclick = changeSection
 $instructionsButton.onclick = showInstructions
@@ -50,14 +54,16 @@ function maquina(contenedor, texto, intervalo) {
     timerMaquina = setInterval(function() {
         cnt.innerHTML = cnt.innerHTML.substr(0, cnt.innerHTML.length - 1) + texto.charAt(i) + "_";
         if (i >= longitud) {
-            return clearInterval(timer);
-            cnt.innerHTML = cnt.innerHTML.substr(0, longitud);
-            return true;
+            return clearInterval(timerMaquina);
+            // cnt.innerHTML = cnt.innerHTML.substr(0, longitud);
+            // return true;
         } else {
             i++;
         }
     }, intervalo);
 };
+
+// UPDATE FUNCTION
 
 function update() {
     frames += 1
@@ -68,6 +74,8 @@ function update() {
     background.draw()
     traveller.draw()
 }
+
+// General functions
 
 function clearCanvas() {
     ctx.fillStyle = '#6db3d7'
@@ -147,6 +155,10 @@ function checkProgress() {
     }
 }
 
+// First card
+
 newCard(countries[0])
+
+// Start game
 
 window.onload = start

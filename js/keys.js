@@ -1,3 +1,5 @@
+// Keys events within the game
+
 function checkKeys() {
     if (keys["a"] && $card.style.display === 'none') {
         return background.scrollLeft()

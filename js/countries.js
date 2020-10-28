@@ -1,3 +1,5 @@
+// Array of objects with the countries of all America
+
 let countries = [{
     name: 'Canadá',
     capital: 'Ottawa',
@@ -152,31 +154,31 @@ let countries = [{
     name: 'Venezuela',
     capital: 'Caracas',
     level: 3,
-    x: -400,
+    x: -50,
     y: 0
 }, {
     name: 'Guyana',
     capital: 'Georgetown',
     level: 3,
-    x: -400,
+    x: -50,
     y: 0
 }, {
     name: 'Surinam',
     capital: 'Paramaribo',
     level: 3,
-    x: -400,
+    x: -50,
     y: 0
 }, {
     name: 'Guayana francesa',
     capital: 'Cayena',
     level: 3,
-    x: -400,
+    x: -50,
     y: 0
 }, {
     name: 'Brasil',
     capital: 'Brasilia',
     level: 3,
-    x: -400,
+    x: -50,
     y: 0
 }, {
     name: 'Ecuador',
@@ -228,9 +230,15 @@ let countries = [{
     y: 0
 }]
 
+// Array of possible wrong answers
+
 const wrongAnswersArray = ['Ciudad de Bélice', 'Corozal', 'Córdoba', 'Medellin', 'San Fermín', 'Cuenca', 'Montañitas', 'Cienfuegos', 'Monterrey', 'Nueva York', 'Chicago', 'La Plata', 'Rio de Janeiro', 'Arraial do cabo', 'Fortaleza', 'Rocha', 'Canelones', 'Encarnación', 'Paris', 'Berlín', 'Hong Kong', 'Estambul', 'Ghana', 'Melbourne', 'Granada', 'Valdivia', 'Valparaiso', 'Ozorno', 'Cochabamba', 'Coroico', 'Humahuaca', 'Iquitos', 'Guayaquil', 'Ciudad del Cabo', 'San Francisco', 'Villavicencio', 'Magdalena', 'Río Gallegos', 'Concordia', 'Maracaibo', 'Cartagena', 'Santa Marta', 'Florianópolis', 'Marrakesh', 'Fez', 'El Cairo', 'Sydney', 'Ho Chi Minh', 'Tokyo', 'Hiroshima', 'Seúl', 'Pekín', 'Hanoi', 'Bangkok', 'Alger', 'Londres']
 
+// Array of wrong answers to be used in each card
+
 let wrongAnswers = []
+
+// Function to pick the wrong answers
 
 function randomArray() {
     wrongAnswers = []
@@ -239,8 +247,10 @@ function randomArray() {
     let random3 = Math.floor(Math.random() * wrongAnswersArray.length)
     let random4 = Math.floor(Math.random() * wrongAnswersArray.length)
     let random5 = Math.floor(Math.random() * wrongAnswersArray.length)
+    let random6 = Math.floor(Math.random() * wrongAnswersArray.length)
+    let random7 = Math.floor(Math.random() * wrongAnswersArray.length)
     wrongAnswersArray.forEach((name, index) => {
-        if (index === random || index === random2 || index === random3 || index === random4 || index === random5) {
+        if (index === random || index === random2 || index === random3 || index === random4 || index === random5 || index === random6 || index === random7) {
             wrongAnswers.push(name)
         }
     })

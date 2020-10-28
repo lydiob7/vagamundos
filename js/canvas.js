@@ -1,3 +1,5 @@
+// All the elements from the HTML to be used in the game
+
 const $canvas = document.querySelector('#canvas')
 const ctx = $canvas.getContext('2d')
 
