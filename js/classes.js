@@ -45,10 +45,10 @@ class Map {
 
 class Traveller {
     constructor(player) {
-        this.x = 475
-        this.y = 150
-        this.width = 250
-        this.height = 160
+        this.x = 545
+        this.y = 170
+        this.width = 67
+        this.height = 100
         this.img = new Image()
         this.img.src = player
         this.img.onload = () => {
@@ -59,6 +59,7 @@ class Traveller {
         ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
     }
     levelUp() {
+
         let destinationX
         let destinationY
         countries.forEach(c => {
@@ -135,6 +136,7 @@ class Card {
             $answer[random].onclick = () => {
                 countriesGuessed.unshift(this.country)
                 next()
+                hideClock()
             }
             $answer[random2()].onclick = looseLife
             $answer[random3()].onclick = looseLife
@@ -179,6 +181,7 @@ class Card {
             $answerLevel2[random].onclick = () => {
                 countriesGuessed.unshift(this.country)
                 next()
+                hideClock()
             }
             $answerLevel2[random2()].onclick = looseLife
             $answerLevel2[random3()].onclick = looseLife

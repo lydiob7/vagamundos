@@ -13,13 +13,13 @@ body {
 
 .btn {
     background-color: #D49F0B;
-    font-family: 'Salsa', cursive;
-    height: 50px;
+    font-family: "Special Elite";
+    height: 70px;
+    padding: 15px;
     color: black;
     border-radius: 1px;
     text-decoration: none;
-    font-size: 19px;
-    transition-duration: 0.5s;
+    font-size: 1.2rem;
     border: 0.4px #D49F0B;
     cursor: pointer;
     outline-color: white;
@@ -48,9 +48,11 @@ body {
 #secondbutton,
 #container-game,
 #card,
+#reloj,
 #arrow-next,
 #next-question,
-#game-over {
+#game-over,
+#try-again {
     display: none;
 }
 
@@ -105,10 +107,11 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
+    font-family: "Special Elite";
 }
 
 #canvas {
-    border: 1px solid brown;
+    border: 10px dashed #b17f4a;
     box-sizing: border-box;
 }
 
@@ -142,6 +145,7 @@ body {
 }
 
 .answer-btn {
+    font-family: "Special Elite";
     max-height: 70px;
     width: 150px;
     margin: 0 10px;
@@ -182,6 +186,10 @@ body {
 
 /* Lives */
 
+#objects-outside-canvas p {
+    font-size: 1.5rem;
+}
+
 #lives {
     display: block;
     top: 0;
@@ -196,11 +204,46 @@ body {
 }
 
 
+/* Reloj */
+
+#reloj {
+    width: 100%;
+}
+
+#reloj .circulo {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #3b8ec3;
+    margin: 50px auto;
+}
+
+#reloj .number {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 80%;
+    top: 10%;
+    left: 10%;
+    font-size: 3rem;
+    text-align: center;
+    background-color: #f5f0da;
+    /* background-image: url('../images/brujulavida.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; */
+    border-radius: 50%;
+}
+
+
 /* Instructions and signs */
 
 #arrow-next,
 #next-question {
-    top: 100px;
+    margin-top: 100px;
     font-size: 1.5rem;
     text-transform: uppercase;
     text-align: center;
@@ -224,6 +267,16 @@ body {
     }
 }
 
+#nivel {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#nivel p {
+    text-align: right;
+}
+
 #game-over {
     /* display: flex; */
     align-items: center;
@@ -232,12 +285,18 @@ body {
     width: 1000px;
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
-    top: 50px;
+    top: 61px;
+    left: 60px;
 }
 
 #game-over h2 {
     text-align: center;
     text-transform: uppercase;
-    font-size: 8rem;
+    font-size: 9rem;
     color: red;
+    transform: rotate(-15deg);
+}
+
+#try-again {
+    margin: 40px 80px;
 }

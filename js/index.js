@@ -5,15 +5,18 @@ let intervalLevel
 let timerMaquina
 let frames = 0
 let keys = []
+let countdown
 let countriesGuessed = []
 let locationTraveller = 'Canadá'
 let nextDestination
 let lives = 5
 let level = 1
-const background = new Map()
+$level.innerHTML = level
+let backgroundCanvas = '#3b8ec3'
+let background = new Map()
 let card
-let imgTraveller1 = '../images/vagamundo.png'
-const traveller = new Traveller(imgTraveller1)
+let imgTraveller1 = '../images/personajenaima.png'
+let traveller = new Traveller(imgTraveller1)
 
 // Events for the first sections
 
@@ -25,6 +28,7 @@ $thirdButton.onclick = changeSection3
 function changeSection() {
     $cover.style.display = `none`
     $rules.style.display = `flex`
+    $body.style.backgroundColor = ' #F5F0DA'
     maquina("#maquina-de-escribir", texto, 50);
 }
 
@@ -43,6 +47,7 @@ function changeSection2() {
 function changeSection3() {
     $players.style.display = `none`
     $containerGame.style.display = 'flex'
+    newCard(countries[0])
 
 }
 
@@ -78,7 +83,7 @@ function update() {
 // General functions
 
 function clearCanvas() {
-    ctx.fillStyle = '#6db3d7'
+    ctx.fillStyle = backgroundCanvas
     ctx.fillRect(-$canvas.width, -$canvas.height * 2, $canvas.width * 3, $canvas.height * 5)
 }
 
@@ -101,6 +106,24 @@ function nextCountry() {
 function newCard(country) {
     card = new Card(country)
     card.show()
+    timeLeft()
+}
+
+function timeLeft() {
+    $reloj.style.display = 'block'
+    $timeLeft.innerHTML = 10
+    countdown = setInterval(() => {
+        if ($timeLeft.innerHTML <= 0) {
+            clearInterval(countdown)
+            return looseLife()
+        }
+        $timeLeft.innerHTML -= 1
+    }, 1000)
+}
+
+function hideClock() {
+    $reloj.style.display = 'none'
+    clearInterval(countdown)
 }
 
 function looseLife() {
@@ -113,7 +136,10 @@ function looseLife() {
 
 function gameOver() {
     $gameOver.style.display = 'flex'
+    card.hide()
     clearInterval(intervalId)
+    clearInterval(countdown)
+    $tryAgain.style.display = 'block'
 }
 
 function checkNextDestination() {
@@ -139,12 +165,16 @@ function hideNextQuestion() {
 
 function checkProgress() {
     if (countriesGuessed[0] === 'México' && level !== 2) {
+        backgroundCanvas = '#5dacdf'
         background.img.src = '../images/americacentral.png'
-        background.x = -40
-        background.y = -400
+        background.x = -240
+        background.y = -300
+        background.height = 1440
+        background.width = 2400
         traveller.x = 475
-        traveller.y = 150
+        traveller.y = 250
         level = 2
+        $level.innerHTML = level
     } else if (countriesGuessed[0] === 'Panamá' && level !== 3) {
         background.img.src = '../images/americadelsur.jpg'
         background.x = 0
@@ -152,13 +182,31 @@ function checkProgress() {
         traveller.x = 475
         traveller.y = 150
         level = 3
+        $level.innerHTML = level
     }
 }
 
-// First card
-
-newCard(countries[0])
+function tryAgain() {
+    intervalId = null
+    $gameOver.style.display = 'none'
+    $tryAgain.style.display = 'none'
+    $hearts.forEach((life) => life.style.display = 'inline-block')
+    frames = 0
+    countriesGuessed = []
+    locationTraveller = 'Canadá'
+    lives = 5
+    level = 1
+    $level.innerHTML = level
+    background.img.src = '../images/americadelnorte.jpg'
+    hideClock()
+    start()
+    hideArrowNext()
+}
 
 // Start game
 
 window.onload = start
+
+// Try again event
+
+$tryAgain.onclick = tryAgain

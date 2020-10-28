@@ -4,146 +4,146 @@ let countries = [{
     name: 'Canadá',
     capital: 'Ottawa',
     level: 1,
-    x: -1050,
+    x: -1080,
     y: -950
 }, {
     name: 'Estados Unidos',
     capital: 'Washington DC',
     level: 1,
-    x: -1030,
+    x: -1060,
     y: -1100
 }, {
     name: 'México',
     capital: 'Ciudad de México',
     level: 1,
-    x: -650,
+    x: -680,
     y: -1200
 }, {
     name: 'Bahamas',
     capital: 'Nasáu',
     level: 2,
-    x: -980,
-    y: -320
+    x: -1040,
+    y: -190
 }, {
     name: 'Cuba',
     capital: 'La Habana',
     level: 2,
-    x: -840,
-    y: -416
+    x: -890,
+    y: -240
 }, {
     name: 'Jamaica',
     capital: 'Kingston',
     level: 2,
-    x: -1000,
-    y: -640
+    x: -1050,
+    y: -440
 }, {
     name: 'Haití',
     capital: 'Puerto Príncipe',
     level: 2,
-    x: -1190,
-    y: -630
+    x: -1240,
+    y: -420
 }, {
     name: 'República Dominicana',
     capital: 'Santo Domingo',
     level: 2,
-    x: -1240,
-    y: -580
+    x: -1290,
+    y: -380
 }, {
     name: 'Puerto Rico',
     capital: 'San Juan',
     level: 2,
-    x: -1420,
-    y: -636
+    x: -1460,
+    y: -426
 }, {
     name: 'San Cristóbal y Nieves',
     capital: 'Basseterre',
     level: 2,
-    x: -1530,
-    y: -690
+    x: -1580,
+    y: -490
 }, {
     name: 'Antigua y Barbuda',
     capital: 'Saint John',
     level: 2,
-    x: -1580,
-    y: -690
+    x: -1630,
+    y: -490
 }, {
     name: 'Dominica',
     capital: 'Roseau',
     level: 2,
-    x: -1600,
-    y: -790
+    x: -1650,
+    y: -590
 }, {
     name: 'Santa Lucía',
     capital: 'Castries',
     level: 2,
-    x: -1616,
-    y: -850
+    x: -1666,
+    y: -650
 }, {
     name: 'Barbados',
     capital: 'Bridgetown',
     level: 2,
-    x: -1710,
-    y: -910
+    x: -1760,
+    y: -710
 }, {
     name: 'San Vicente y las Granadinas',
     capital: 'Kingstown',
     level: 2,
-    x: -1610,
-    y: -920
+    x: -1660,
+    y: -720
 }, {
     name: 'Granada',
     capital: 'Saint George',
     level: 2,
-    x: -1610,
-    y: -940
+    x: -1660,
+    y: -740
 }, {
     name: 'Trinidad y Tobago',
     capital: 'Puerto España',
     level: 2,
-    x: -1610,
-    y: -1010
+    x: -1660,
+    y: -810
 }, {
     name: 'Bélice',
     capital: 'Belmopán',
     level: 2,
-    x: -570,
-    y: -680
+    x: -630,
+    y: -480
 }, {
     name: 'Guatemala',
     capital: 'Ciudad de Guatemala',
     level: 2,
-    x: -494,
-    y: -830
+    x: -544,
+    y: -610
 }, {
     name: 'El Salvador',
     capital: 'San Salvador',
     level: 2,
-    x: -544,
-    y: -860
+    x: -594,
+    y: -640
 }, {
     name: 'Honduras',
     capital: 'Tegucigalpa',
     level: 2,
-    x: -634,
-    y: -840
+    x: -684,
+    y: -610
 }, {
     name: 'Nicaragua',
     capital: 'Managua',
     level: 2,
-    x: -680,
-    y: -940
+    x: -730,
+    y: -710
 }, {
     name: 'Costa Rica',
     capital: 'San José',
     level: 2,
-    x: -740,
-    y: -1040
+    x: -790,
+    y: -800
 }, {
     name: 'Panamá',
     capital: 'Ciudad de Panamá',
     level: 2,
-    x: -910,
-    y: -1090
+    x: -960,
+    y: -840
 }, {
     name: 'Colombia',
     capital: 'Bogotá',

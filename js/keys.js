@@ -26,6 +26,7 @@ function checkKeys() {
 }
 
 function checkNextLevel() {
+
     if (keys[" "]) {
         traveller.levelUp()
     }
