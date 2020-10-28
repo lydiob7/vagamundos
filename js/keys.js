@@ -1,16 +1,16 @@
 // Keys events within the game
 
 function checkKeys() {
-    if (keys["a"] && $card.style.display === 'none') {
+    if (keys["ArrowLeft"] && $card.style.display === 'none' && locationTraveller !== 'Estados Unidos') {
         return background.scrollLeft()
     }
-    if (keys["d"] && $card.style.display === 'none') {
+    if (keys["ArrowRight"] && $card.style.display === 'none' && locationTraveller !== 'Estados Unidos') {
         return background.scrollRight()
     }
-    if (keys["w"] && $card.style.display === 'none') {
+    if (keys["ArrowUp"] && $card.style.display === 'none' && locationTraveller !== 'Estados Unidos') {
         return background.scrollUp()
     }
-    if (keys["s"] && $card.style.display === 'none') {
+    if (keys["ArrowDown"] && $card.style.display === 'none' && locationTraveller !== 'Estados Unidos') {
         return background.scrollDown()
     }
     if (keys["Enter"] && $card.style.display === 'none') {
@@ -28,6 +28,9 @@ function checkKeys() {
 function checkNextLevel() {
 
     if (keys[" "]) {
+        if (locationTraveller === 'Estados Unidos') return traveller.levelUp()
+        traveller.x = 475
+        traveller.y = 250
         traveller.levelUp()
     }
 }

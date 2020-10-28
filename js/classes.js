@@ -45,8 +45,8 @@ class Map {
 
 class Traveller {
     constructor(player) {
-        this.x = 545
-        this.y = 170
+        this.x = 475
+        this.y = 250
         this.width = 67
         this.height = 100
         this.img = new Image()

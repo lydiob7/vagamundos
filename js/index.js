@@ -34,7 +34,7 @@ function changeSection() {
     $cover.style.display = `none`
     $rules.style.display = `flex`
     $body.style.backgroundColor = ' #F5F0DA'
-    maquina("#maquina-de-escribir", texto, 50);
+    maquina("#maquina-de-escribir", texto, 50)
 }
 
 function showInstructions() {
@@ -53,12 +53,16 @@ function naimaCard() {
     $players.style.display = `none`
     $containerNaima.style.display = 'flex'
     traveller = new Traveller(imgNaima)
+    clearInterval(timerMaquina)
+    maquina("#naima-description", textoNaima, 50)
 }
 
 function bernardCard() {
     $players.style.display = `none`
     $containerBernard.style.display = 'flex'
     traveller = new Traveller(imgBernard)
+    clearInterval(timerMaquina)
+    maquina("#bernard-description", textoBernard, 50)
 }
 
 function changeSection3() {
@@ -79,8 +83,6 @@ function maquina(contenedor, texto, intervalo) {
         cnt.innerHTML = cnt.innerHTML.substr(0, cnt.innerHTML.length - 1) + texto.charAt(i) + "_";
         if (i >= longitud) {
             return clearInterval(timerMaquina);
-            // cnt.innerHTML = cnt.innerHTML.substr(0, longitud);
-            // return true;
         } else {
             i++;
         }
@@ -199,7 +201,7 @@ function checkProgress() {
         background.x = 0
         background.y = 0
         traveller.x = 475
-        traveller.y = 150
+        traveller.y = 250
         level = 3
         $level.innerHTML = level
     }

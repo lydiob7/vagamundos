@@ -19,6 +19,8 @@ const $bernardButton = document.querySelector('#bernardbutton')
 const $containerGame = document.querySelector(`#container-game`)
 const texto = "Con una superficie de más de 43 316 000 km², es la segunda masa de tierra más grande del globo, cubriendo el 8 % de la superficie total del planeta y el 28,4 % de la tierra emergida, y además concentrando cerca del 12,5 % de la población humana. Debido a su gran tamaño y sus características geográficas, en algunas culturas, América se divide tradicionalmente en América del Norte, América Central, y América del Sur.";
 const texto2 = `Inspirad@s en historias de aventurer@s, nuestr@s vagamund@s quieren recorrer el continente americano y finalizar su periplo en el "fin del mundo". ¿Te animas a ayudarl@s? Sólo necesitan saber las capitales.`
+const textoNaima = 'Edad: 10 años. Hobbies: Leer poesía y aprender idiomas. Superpoder: Hablar con los animales. Sueño: Recorrer el mundo haciendo barco-stop'
+const textoBernard = 'Edad: 10 años. Hobbies: Leer poesía y aprender idiomas. Superpoder: Hablar con los animales. Sueño: Recorrer el mundo haciendo barco-stop'
 
 const $card = document.querySelector('#card')
 const $country = document.querySelector('#country')
