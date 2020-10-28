@@ -15,15 +15,20 @@ $level.innerHTML = level
 let backgroundCanvas = '#3b8ec3'
 let background = new Map()
 let card
-let imgTraveller1 = '../images/personajenaima.png'
-let traveller = new Traveller(imgTraveller1)
+const imgNaima = `../images/personajenaima.png`
+const imgBernard = `../images/Bernard.png`
+let traveller
+
 
 // Events for the first sections
 
-$button.onclick = changeSection
+$startButton.onclick = changeSection
 $instructionsButton.onclick = showInstructions
 $secondButton.onclick = changeSection2
 $thirdButton.onclick = changeSection3
+$bernardButton.onclick = changeSection3
+$naima.onclick = naimaCard
+$bernard.onclick = bernardCard
 
 function changeSection() {
     $cover.style.display = `none`
@@ -44,9 +49,23 @@ function changeSection2() {
     $players.style.display = `flex`
 }
 
-function changeSection3() {
+function naimaCard() {
     $players.style.display = `none`
+    $containerNaima.style.display = 'flex'
+    traveller = new Traveller(imgNaima)
+}
+
+function bernardCard() {
+    $players.style.display = `none`
+    $containerBernard.style.display = 'flex'
+    traveller = new Traveller(imgBernard)
+}
+
+function changeSection3() {
+    $containerNaima.style.display = 'none'
+    $containerBernard.style.display = 'none'
     $containerGame.style.display = 'flex'
+    start()
     newCard(countries[0])
 
 }
@@ -205,7 +224,7 @@ function tryAgain() {
 
 // Start game
 
-window.onload = start
+// window.onload = 
 
 // Try again event
 

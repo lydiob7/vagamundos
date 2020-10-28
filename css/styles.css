@@ -45,6 +45,8 @@ body {
 
 .container-rules,
 .container-characters,
+.container-naima,
+.container-bernard,
 #secondbutton,
 #container-game,
 #card,
@@ -58,6 +60,19 @@ body {
 
 
 /* Game cover */
+
+.container-cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/papiro.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
 
 #portada {
     width: 1000px;
@@ -90,7 +105,43 @@ body {
 
 /* Characters */
 
-#vagamundo1 {
+.container-characters {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 600px;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.container-characters img {
+    height: 100%;
+    width: auto;
+    margin: 0 20px;
+    transition: all .5s ease;
+}
+
+.container-characters img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#bernard-char {
+    height: 80%;
+    margin-top: 70px;
+}
+
+.container-naima,
+.container-bernard {
+    width: 1000px;
+    height: 600px;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#naima,
+#bernard {
     height: 100%;
 }
 
@@ -140,6 +191,8 @@ body {
 }
 
 #card h2 {
+    display: inline-block;
+    width: 80%;
     color: black;
     font-size: 2rem;
 }
@@ -147,12 +200,14 @@ body {
 .answer-btn {
     font-family: "Special Elite";
     max-height: 70px;
-    width: 150px;
+    width: 170px;
     margin: 0 10px;
     padding: 20px;
     background-color: #b07f48;
     color: white;
     font-size: 1.3rem;
+    border-radius: 10px;
+    border: none;
 }
 
 .answer-btn:hover {

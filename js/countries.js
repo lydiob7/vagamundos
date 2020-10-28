@@ -65,7 +65,7 @@ let countries = [{
     capital: 'Saint John',
     level: 2,
     x: -1630,
-    y: -490
+    y: -470
 }, {
     name: 'Dominica',
     capital: 'Roseau',
