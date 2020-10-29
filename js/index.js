@@ -125,7 +125,7 @@ function start() {
 
 function next() {
     if (intervalLevel) return
-    intervalLevel = setInterval(nextCountry, 1000 / 60)
+    intervalLevel = setInterval(nextCountry, 500 / 60)
     card.hide()
     showArrowNext()
 }
@@ -174,6 +174,7 @@ function gameOver() {
 }
 
 function checkNextDestination() {
+    if (locationTraveller === 'Fin del mundo') return
     countries.forEach((c, index) => {
         if (c.name === locationTraveller) {
             nextDestination = countries[index + 1].name
