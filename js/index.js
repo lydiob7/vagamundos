@@ -6,8 +6,10 @@ let timerMaquina
 let frames = 0
 let keys = []
 let countdown
-let countriesGuessed = []
-let locationTraveller = 'Canadá'
+    // let countriesGuessed = []
+let countriesGuessed = ['Panamá']
+    // let locationTraveller = 'Canadá'
+let locationTraveller = 'Colombia'
 let nextDestination
 let lives = 5
 let level = 1
@@ -200,11 +202,17 @@ function checkProgress() {
         background.img.src = '../images/americadelsur.jpg'
         background.x = 0
         background.y = 0
+        background.height = 2400
+        background.width = 2400
         traveller.x = 475
         traveller.y = 250
         level = 3
         $level.innerHTML = level
     }
+}
+
+function removeAccents(str) {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
 }
 
 function tryAgain() {

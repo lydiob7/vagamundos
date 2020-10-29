@@ -49,6 +49,7 @@ body {
 .container-bernard,
 #secondbutton,
 #container-game,
+#input-level3,
 #card,
 #reloj,
 #arrow-next,
@@ -241,6 +242,23 @@ body {
     height: 200px;
     justify-content: space-evenly;
     flex-wrap: wrap;
+}
+
+#input-level3 {
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#input-level3 input {
+    height: 70px;
+    width: 300px;
+    font-family: "Special Elite";
+    font-size: 2rem;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
 }
 
 

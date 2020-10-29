@@ -111,7 +111,6 @@ class Card {
     constructor(country) {
         this.country = country.name
         this.answer = country.capital
-        this.wrongAnswers = country.wrongAnswers
         this.level = country.level
     }
     show() {
@@ -140,7 +139,7 @@ class Card {
             }
             $answer[random2()].onclick = looseLife
             $answer[random3()].onclick = looseLife
-        } else if (this.level === 2 || this.level === 3) {
+        } else if (this.level === 2) {
             let random = Math.floor(Math.random() * 6)
 
             function random2() {
@@ -189,7 +188,32 @@ class Card {
             $answerLevel2[random5()].onclick = looseLife
             $answerLevel2[random6()].onclick = looseLife
         } else if (this.level === 3) {
+            $card.style.display = 'flex'
+            $country.innerHTML = this.country
+            $buttonsLevel1.style.display = 'none'
+            $buttonsLevel2.style.display = 'none'
+            $answerLevel3.style.display = 'flex'
+            $inputLevel3.placeholder = ''
 
+            for (let i = 0; i < this.answer.length; i++) {
+                $inputLevel3.placeholder += '_'
+            }
+
+            let correctAnswer = removeAccents(this.answer).toLowerCase()
+
+
+            $buttonLevel3.onclick = () => {
+                let givenAnswer = removeAccents($inputLevel3.value).toLowerCase()
+                if (givenAnswer === correctAnswer) {
+                    countriesGuessed.unshift(this.country)
+                    next()
+                    hideClock()
+                    $inputLevel3.value = ''
+                } else {
+                    looseLife()
+                    $inputLevel3.value = ''
+                }
+            }
         }
     }
     hide() {
