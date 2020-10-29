@@ -17,7 +17,8 @@ let lives = 5
 let level = 1
 $level.innerHTML = level
 let backgroundCanvas = '#3b8ec3'
-let background = new Map()
+const firstMap = '../images/americadelnorte.png'
+let background = new Map(firstMap)
 let card
 const imgNaima = `../images/personajenaima.png`
 const imgBernard = `../images/Bernard.png`
@@ -34,6 +35,13 @@ $thirdButton.onclick = changeSection3
 $bernardButton.onclick = changeSection3
 $naima.onclick = naimaCard
 $bernard.onclick = bernardCard
+
+// Events for the second part 
+
+$volverAJugar.onclick = () => {
+    window.location.reload()
+    return false
+}
 
 function changeSection() {
     $cover.style.display = `none`
@@ -237,8 +245,15 @@ function tryAgain() {
     lives = 5
     level = 1
     $level.innerHTML = level
-    background.img.src = '../images/americadelnorte.jpg'
+    background.img.src = firstMap
+    background.width = 2398
+    background.height = 1799
+    background.x = countries[0].x
+    background.y = countries[0].y
     hideClock()
+        // clearCanvas()
+        // background.draw()
+        // traveller.draw()
     start()
     hideArrowNext()
 }

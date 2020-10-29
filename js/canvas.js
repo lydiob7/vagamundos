@@ -43,5 +43,6 @@ const $timeLeft = document.querySelector('#reloj h3')
 const $level = document.querySelector('#nivel span')
 const $gameOver = document.querySelector('#game-over')
 const $tryAgain = document.querySelector('#try-again')
+const $volverAJugar = document.querySelector('#lastbutton')
 
 const $winSection = document.querySelector('.container-win')

@@ -5,13 +5,13 @@
 // MAP
 
 class Map {
-    constructor() {
+    constructor(mapa) {
         this.x = countries[0].x
         this.y = countries[0].y
         this.width = 2398
         this.height = 1799
         this.img = new Image()
-        this.img.src = '../images/americadelnorte.png'
+        this.img.src = mapa
         this.img.onload = () => {
             this.draw()
         }
@@ -134,6 +134,8 @@ class Card {
             $answer[random2()].innerHTML = wrongAnswers[0]
             $answer[random3()].innerHTML = wrongAnswers[1]
             $card.style.display = 'flex'
+            $buttonsLevel1.style.display = 'flex'
+            $buttonsLevel2.style.display = 'none'
             $answer[random].onclick = () => {
                 countriesGuessed.unshift(this.country)
                 next()

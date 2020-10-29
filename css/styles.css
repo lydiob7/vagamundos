@@ -96,7 +96,6 @@ body {
 }
 
 #maquina-de-escribir,
-#win-content,
 #subtitle {
     width: 600px;
     height: 400px;
@@ -406,4 +405,27 @@ body {
 
 #try-again {
     margin: 40px 80px;
+}
+
+
+/* Win */
+
+.container-win {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#win {
+    width: 550px;
+    height: auto;
+}
+
+#win-content {
+    width: 600px;
+    height: 400px;
+    font-size: 25px;
+    text-align: center;
+    font-family: "Special Elite";
+    color: #3b8ec3;
 }
