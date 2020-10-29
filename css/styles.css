@@ -1,77 +1,121 @@
-                        body {
-                            background-color: white;
-                            margin: 0;
-                            height: 100%;
-                            /* overflow: hidden */
-                        }
-                        
-                        .container-cover,
-                        .container-rules,
-                        .container-characters {
-                            display: flex;
-                            flex-direction: column;
-                            width: 1200px;
-                            height: 600px;
-                            align-items: center;
-                            margin: 0 auto;
-                        }
-                        
-                        #portada {
-                            width: 1000px;
-                        }
-                        
-                        .container-rules {
-                            justify-content: space-between;
-                            background-color: #F5F0DA;
-                            padding-bottom: 50px;
-                            position: relative;
-                        }
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #6db3d7;
+}
 
-                        #maquina-de-escribir{
-                            width: 600px ;
-                            height: 400px;
-                            position: absolute;
-                            left: 600px;
-                            top: 50px;
-                            padding:20px;
-                            box-sizing: border-box;
-                            font-size: 25px;
-                            text-align: center;
-                            font-family: "Special Elite";
+h1 {
+    display: inline-block;
+}
 
+#card {
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: 135px;
+    height: 500px;
+    width: 700px;
+    background-image: url('../images/tarjetas.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-                        }
-                        
-                        #vagamundo1 {
-                            height: 100%;
-                        }
-                        
-                        .btn {
-                            background-color: #D49F0B;
-                            font-family: 'Salsa', cursive;
-                            height: 50px;
-                            color: black;
-                            border-radius: 1px;
-                            text-decoration: none;
-                            font-size: 19px;
-                            transition-duration: 0.5s;
-                            border: 0.4px #D49F0B;
-                            cursor: pointer;
-                            outline-color: white;
-                            transition: all 0.5s cubic-bezier(.82, .28, .83, .67);
-                        }
-                        
-                        .btn:hover {
-                            outline-offset: 20px;
-                            text-shadow: 3px 3px 4px white;
-                            transform: scale(1.9);
-                        }
+#card h2 {
+    color: black;
+    font-size: 2rem;
+}
 
-                        #secondbutton {
-                            display: none;
-                        }
-                        
-                        .container-rules,
-                        .container-characters {
-                            display: none;
-                        }
+#buttons-level1 {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.answer-btn {
+    max-height: 70px;
+    width: 150px;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: #b07f48;
+    color: white;
+    font-size: 1.3rem;
+}
+
+#buttons-level2 {
+    display: none;
+    height: 200px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#lives {
+    display: block;
+    position: absolute;
+    top: 120px;
+    left: 170px;
+}
+
+#lives img {
+    display: inline-block;
+    height: 50px;
+    width: auto;
+    margin-left: 2px;
+}
+
+#arrow-next,
+#next-question {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+#arrow-next h3 {
+    text-align: center;
+}
+
+#arrow-next span {
+    display: inline-block;
+    position: relative;
+    transform: rotate(90deg);
+    animation: down 1s infinite;
+}
+
+@keyframes down {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: 30px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+#game-over {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    width: 1200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 80px;
+}
+
+#game-over h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 8rem;
+    color: red;
+}
