@@ -1,3 +1,5 @@
+// This code was writen by Gabriela Polanco Ferreyra (https://github.com/gabipolanco) and Tomas Scattini (https://github.com/Tomasscattini) in October 2020
+
 // Array of objects with the countries of all America
 
 let countries = [{
@@ -71,37 +73,37 @@ let countries = [{
     capital: 'Roseau',
     level: 2,
     x: -1650,
-    y: -590
+    y: -540
 }, {
     name: 'Santa Lucía',
     capital: 'Castries',
     level: 2,
     x: -1666,
-    y: -650
+    y: -600
 }, {
     name: 'Barbados',
     capital: 'Bridgetown',
     level: 2,
-    x: -1760,
-    y: -710
+    x: -1730,
+    y: -640
 }, {
     name: 'San Vicente y las Granadinas',
     capital: 'Kingstown',
     level: 2,
     x: -1660,
-    y: -720
+    y: -620
 }, {
     name: 'Granada',
     capital: 'Saint George',
     level: 2,
-    x: -1660,
-    y: -740
+    x: -1650,
+    y: -670
 }, {
     name: 'Trinidad y Tobago',
     capital: 'Puerto España',
     level: 2,
     x: -1660,
-    y: -810
+    y: -740
 }, {
     name: 'Bélice',
     capital: 'Belmopán',
@@ -113,13 +115,13 @@ let countries = [{
     capital: 'Ciudad de Guatemala',
     level: 2,
     x: -544,
-    y: -610
+    y: -590
 }, {
     name: 'El Salvador',
     capital: 'San Salvador',
     level: 2,
-    x: -594,
-    y: -640
+    x: -614,
+    y: -620
 }, {
     name: 'Honduras',
     capital: 'Tegucigalpa',
@@ -131,108 +133,108 @@ let countries = [{
     capital: 'Managua',
     level: 2,
     x: -730,
-    y: -710
+    y: -690
 }, {
     name: 'Costa Rica',
     capital: 'San José',
     level: 2,
     x: -790,
-    y: -800
+    y: -770
 }, {
     name: 'Panamá',
     capital: 'Ciudad de Panamá',
     level: 2,
     x: -960,
-    y: -840
+    y: -810
 }, {
     name: 'Colombia',
     capital: 'Bogotá',
     level: 3,
-    x: -50,
-    y: 0
+    x: -170,
+    y: -20
 }, {
     name: 'Venezuela',
     capital: 'Caracas',
     level: 3,
-    x: -50,
-    y: 0
+    x: -400,
+    y: 70
 }, {
     name: 'Guyana',
     capital: 'Georgetown',
     level: 3,
-    x: -50,
-    y: 0
+    x: -670,
+    y: 20
 }, {
     name: 'Surinam',
     capital: 'Paramaribo',
     level: 3,
-    x: -50,
-    y: 0
+    x: -780,
+    y: -10
 }, {
     name: 'Guayana francesa',
     capital: 'Cayena',
     level: 3,
-    x: -50,
-    y: 0
+    x: -870,
+    y: -60
 }, {
     name: 'Brasil',
     capital: 'Brasilia',
     level: 3,
-    x: -50,
-    y: 0
+    x: -1020,
+    y: -680
 }, {
     name: 'Ecuador',
     capital: 'Quito',
     level: 3,
-    x: -400,
-    y: 0
+    x: -20,
+    y: -170
 }, {
     name: 'Perú',
     capital: 'Lima',
     level: 3,
-    x: -400,
-    y: 0
+    x: -90,
+    y: -520
 }, {
     name: 'Chile',
     capital: 'Santiago',
     level: 3,
-    x: -400,
-    y: 0
+    x: -320,
+    y: -1270
 }, {
     name: 'Bolivia',
     capital: 'La Paz',
     level: 3,
-    x: -400,
-    y: 0
+    x: -370,
+    y: -670
 }, {
     name: 'Paraguay',
     capital: 'Asunción',
     level: 3,
-    x: -400,
-    y: 0
+    x: -690,
+    y: -940
 }, {
     name: 'Uruguay',
     capital: 'Montevideo',
     level: 3,
-    x: -400,
-    y: 0
+    x: -720,
+    y: -1240
 }, {
     name: 'Argentina',
     capital: 'Buenos Aires',
     level: 3,
-    x: -400,
-    y: 0
+    x: -640,
+    y: -1260
 }, {
     name: 'Fin del mundo',
     capital: 'Ushuaia',
     level: 4,
-    x: -400,
-    y: 0
+    x: -490,
+    y: -1870
 }]
 
 // Array of possible wrong answers
 
-const wrongAnswersArray = ['Ciudad de Bélice', 'Corozal', 'Córdoba', 'Medellin', 'San Fermín', 'Cuenca', 'Montañitas', 'Cienfuegos', 'Monterrey', 'Nueva York', 'Chicago', 'La Plata', 'Rio de Janeiro', 'Arraial do cabo', 'Fortaleza', 'Rocha', 'Canelones', 'Encarnación', 'Paris', 'Berlín', 'Hong Kong', 'Estambul', 'Ghana', 'Melbourne', 'Granada', 'Valdivia', 'Valparaiso', 'Ozorno', 'Cochabamba', 'Coroico', 'Humahuaca', 'Iquitos', 'Guayaquil', 'Ciudad del Cabo', 'San Francisco', 'Villavicencio', 'Magdalena', 'Río Gallegos', 'Concordia', 'Maracaibo', 'Cartagena', 'Santa Marta', 'Florianópolis', 'Marrakesh', 'Fez', 'El Cairo', 'Sydney', 'Ho Chi Minh', 'Tokyo', 'Hiroshima', 'Seúl', 'Pekín', 'Hanoi', 'Bangkok', 'Alger', 'Londres']
+const wrongAnswersArray = ['Ciudad de Bélice', 'Corozal', 'Córdoba', 'Medellin', 'San Fermín', 'Cuenca', 'Montañitas', 'Cienfuegos', 'Monterrey', 'Nueva York', 'Chicago', 'La Plata', 'Rio de Janeiro', 'Arraial do cabo', 'Fortaleza', 'Rocha', 'Canelones', 'Encarnación', 'Paris', 'Berlín', 'Hong Kong', 'Estambul', 'Ghana', 'Melbourne', 'Granada', 'Valdivia', 'Valparaiso', 'Ozorno', 'Cochabamba', 'Coroico', 'Humahuaca', 'Iquitos', 'Guayaquil', 'Ciudad del Cabo', 'San Francisco', 'Lyon', 'Magdalena', 'Río Gallegos', 'Concordia', 'Maracaibo', 'Cartagena', 'Santa Marta', 'Floripa', 'Marrakesh', 'Fez', 'El Cairo', 'Sydney', 'Ho Chi Minh', 'Tokyo', 'Hiroshima', 'Seúl', 'Pekín', 'Hanoi', 'Bangkok', 'Alger', 'Londres']
 
 // Array of wrong answers to be used in each card
 

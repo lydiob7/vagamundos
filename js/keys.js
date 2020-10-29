@@ -1,3 +1,5 @@
+// This code was writen by Gabriela Polanco Ferreyra (https://github.com/gabipolanco) and Tomas Scattini (https://github.com/Tomasscattini) in October 2020
+
 // Keys events within the game
 
 function checkKeys() {

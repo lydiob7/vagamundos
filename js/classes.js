@@ -1,3 +1,5 @@
+// This code was writen by Gabriela Polanco Ferreyra (https://github.com/gabipolanco) and Tomas Scattini (https://github.com/Tomasscattini) in October 2020
+
 // Classes for the objects in the game
 
 // MAP
@@ -187,12 +189,13 @@ class Card {
             $answerLevel2[random4()].onclick = looseLife
             $answerLevel2[random5()].onclick = looseLife
             $answerLevel2[random6()].onclick = looseLife
-        } else if (this.level === 3) {
+        } else if (this.level === 3 || this.level === 4) {
             $card.style.display = 'flex'
             $country.innerHTML = this.country
             $buttonsLevel1.style.display = 'none'
             $buttonsLevel2.style.display = 'none'
             $answerLevel3.style.display = 'flex'
+            $inputLevel3.focus()
             $inputLevel3.placeholder = ''
 
             for (let i = 0; i < this.answer.length; i++) {
@@ -204,7 +207,12 @@ class Card {
 
             $buttonLevel3.onclick = () => {
                 let givenAnswer = removeAccents($inputLevel3.value).toLowerCase()
-                if (givenAnswer === correctAnswer) {
+                if (givenAnswer === correctAnswer && this.level === 4) {
+                    countriesGuessed.unshift(this.country)
+                    hideClock()
+                    $inputLevel3.value = ''
+                    win()
+                } else if (givenAnswer === correctAnswer) {
                     countriesGuessed.unshift(this.country)
                     next()
                     hideClock()

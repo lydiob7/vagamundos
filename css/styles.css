@@ -1,4 +1,4 @@
-/* This code was writen by Gabriela Polanco Ferreyra and Tomas Scattini in October 2020 */
+/* This code was writen by Gabriela Polanco Ferreyra (https://github.com/gabipolanco) and Tomas Scattini (https://github.com/Tomasscattini) in October 2020 */
 
 
 /* General styles */
@@ -34,7 +34,9 @@ body {
 
 .container-cover,
 .container-rules,
-.container-characters {
+.container-rules2,
+.container-characters,
+.container-win {
     display: flex;
     flex-direction: column;
     width: 1200px;
@@ -44,10 +46,11 @@ body {
 }
 
 .container-rules,
+.container-rules2,
 .container-characters,
 .container-naima,
 .container-bernard,
-#secondbutton,
+#siguiente,
 #container-game,
 #input-level3,
 #card,
@@ -55,7 +58,8 @@ body {
 #arrow-next,
 #next-question,
 #game-over,
-#try-again {
+#try-again,
+.container-win {
     display: none;
 }
 
@@ -82,7 +86,8 @@ body {
 
 /* Rules */
 
-.container-rules {
+.container-rules,
+.container-rules2 {
     justify-content: space-between;
     background-color: #F5F0DA;
     padding-bottom: 50px;
@@ -90,17 +95,28 @@ body {
     position: relative;
 }
 
-#maquina-de-escribir {
+#maquina-de-escribir,
+#win-content,
+#subtitle {
     width: 600px;
     height: 400px;
     position: absolute;
     left: 600px;
-    top: 50px;
+    top: 70px;
     padding: 20px;
     box-sizing: border-box;
     font-size: 25px;
     text-align: center;
     font-family: "Special Elite";
+}
+
+#subtitle {
+    top: 0;
+}
+
+#rules2 {
+    width: auto;
+    height: 100%;
 }
 
 
@@ -208,7 +224,8 @@ body {
 
 #card h2 {
     display: inline-block;
-    width: 80%;
+    text-align: justify;
+    width: 550px;
     color: black;
     font-size: 2rem;
 }
@@ -259,6 +276,8 @@ body {
     box-sizing: border-box;
     background-color: transparent;
     border: none;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 

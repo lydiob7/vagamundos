@@ -1,3 +1,5 @@
+// This code was writen by Gabriela Polanco Ferreyra (https://github.com/gabipolanco) and Tomas Scattini (https://github.com/Tomasscattini) in October 2020
+
 // Variables
 
 let intervalId
@@ -7,9 +9,9 @@ let frames = 0
 let keys = []
 let countdown
 let countriesGuessed = []
-    // let countriesGuessed = ['Panamá']
+    // let countriesGuessed = ['Uruguay']
 let locationTraveller = 'Canadá'
-    // let locationTraveller = 'Colombia'
+    // let locationTraveller = 'Argentina'
 let nextDestination
 let lives = 5
 let level = 1
@@ -26,6 +28,7 @@ let traveller
 
 $startButton.onclick = changeSection
 $instructionsButton.onclick = showInstructions
+$siguienteButton.onclick = nextIntstuctions
 $secondButton.onclick = changeSection2
 $thirdButton.onclick = changeSection3
 $bernardButton.onclick = changeSection3
@@ -41,13 +44,18 @@ function changeSection() {
 
 function showInstructions() {
     $instructionsButton.style.display = 'none'
-    $secondButton.style.display = 'block'
+    $siguienteButton.style.display = 'block'
     clearInterval(timerMaquina)
     maquina("#maquina-de-escribir", texto2, 50)
 }
 
-function changeSection2() {
+function nextIntstuctions() {
     $rules.style.display = `none`
+    $rules2.style.display = `flex`
+}
+
+function changeSection2() {
+    $rules2.style.display = `none`
     $players.style.display = `flex`
 }
 
@@ -199,7 +207,9 @@ function checkProgress() {
         level = 2
         $level.innerHTML = level
     } else if (countriesGuessed[0] === 'Panamá' && level !== 3) {
+        // } else if (countriesGuessed[0] === 'Uruguay' && level !== 3) {
         background.img.src = '../images/americadelsur.jpg'
+        backgroundCanvas = '#80a1c2'
         background.x = 0
         background.y = 0
         background.height = 2400
@@ -232,9 +242,13 @@ function tryAgain() {
     hideArrowNext()
 }
 
-// Start game
-
-// window.onload = 
+function win() {
+    card.hide()
+    clearInterval(intervalId)
+    clearInterval(countdown)
+    $containerGame.style.display = 'none'
+    $winSection.style.display = 'flex'
+}
 
 // Try again event
 
