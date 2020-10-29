@@ -6,10 +6,10 @@ let timerMaquina
 let frames = 0
 let keys = []
 let countdown
-    // let countriesGuessed = []
-let countriesGuessed = ['Panamá']
-    // let locationTraveller = 'Canadá'
-let locationTraveller = 'Colombia'
+let countriesGuessed = []
+    // let countriesGuessed = ['Panamá']
+let locationTraveller = 'Canadá'
+    // let locationTraveller = 'Colombia'
 let nextDestination
 let lives = 5
 let level = 1
