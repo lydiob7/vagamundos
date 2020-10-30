@@ -136,6 +136,7 @@ class Card {
             $card.style.display = 'flex'
             $buttonsLevel1.style.display = 'flex'
             $buttonsLevel2.style.display = 'none'
+            $answerLevel3.style.display = 'none'
             $answer[random].onclick = () => {
                 countriesGuessed.unshift(this.country)
                 next()

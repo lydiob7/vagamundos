@@ -231,29 +231,29 @@ function removeAccents(str) {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
 }
 
-// function tryAgain() {
-//     intervalId = null
-//     $gameOver.style.display = 'none'
-//     $tryAgain.style.display = 'none'
-//     $hearts.forEach((life) => life.style.display = 'inline-block')
-//     frames = 0
-//     countriesGuessed = []
-//     locationTraveller = 'Canadá'
-//     lives = 5
-//     level = 1
-//     $level.innerHTML = level
-//     background.img.src = firstMap
-//     background.width = 2398
-//     background.height = 1799
-//     background.x = countries[0].x
-//     background.y = countries[0].y
-//     hideClock()
-//         clearCanvas()
-//         background.draw()
-//         traveller.draw()
-//     start()
-//     hideArrowNext()
-// }
+function tryAgain() {
+    intervalId = null
+    $gameOver.style.display = 'none'
+    $tryAgain.style.display = 'none'
+    $hearts.forEach((life) => life.style.display = 'inline-block')
+    frames = 0
+    countriesGuessed = []
+    locationTraveller = 'Canadá'
+    lives = 5
+    level = 1
+    $level.innerHTML = level
+    background.img.src = firstMap
+    background.width = 2398
+    background.height = 1799
+    background.x = countries[0].x
+    background.y = countries[0].y
+    hideClock()
+    clearCanvas()
+    background.draw()
+    traveller.draw()
+    start()
+    hideArrowNext()
+}
 
 function win() {
     card.hide()
@@ -265,7 +265,8 @@ function win() {
 
 // Try again event
 
-$tryAgain.onclick = () => {
-    window.location.reload()
-    return false
-}
+$tryAgain.onclick = tryAgain
+    // () => {
+    //     window.location.reload()
+    //     return false
+    // }
