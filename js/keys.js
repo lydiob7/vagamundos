@@ -28,7 +28,6 @@ function checkKeys() {
 }
 
 function checkNextLevel() {
-
     if (keys[" "]) {
         if (locationTraveller === 'Estados Unidos') return traveller.levelUp()
         traveller.x = 475

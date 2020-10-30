@@ -9,9 +9,9 @@ let frames = 0
 let keys = []
 let countdown
 let countriesGuessed = []
-    // let countriesGuessed = ['Uruguay']
+    // let countriesGuessed = ['Costa Rica']
 let locationTraveller = 'Canadá'
-    // let locationTraveller = 'Argentina'
+    // let locationTraveller = 'Panamá'
 let nextDestination
 let lives = 5
 let level = 1
@@ -133,13 +133,10 @@ function start() {
 
 function next() {
     if (intervalLevel) return
-    intervalLevel = setInterval(nextCountry, 500 / 60)
+    debugger
+    intervalLevel = setInterval(checkNextLevel, 500 / 60)
     card.hide()
     showArrowNext()
-}
-
-function nextCountry() {
-    checkNextLevel()
 }
 
 function newCard(country) {
@@ -216,7 +213,7 @@ function checkProgress() {
         level = 2
         $level.innerHTML = level
     } else if (countriesGuessed[0] === 'Panamá' && level !== 3) {
-        // } else if (countriesGuessed[0] === 'Uruguay' && level !== 3) {
+        // } else if (countriesGuessed[0] === 'Costa Rica' && level !== 3) {
         background.img.src = '../images/americadelsur.jpg'
         backgroundCanvas = '#80a1c2'
         background.x = 0
@@ -234,29 +231,29 @@ function removeAccents(str) {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
 }
 
-function tryAgain() {
-    intervalId = null
-    $gameOver.style.display = 'none'
-    $tryAgain.style.display = 'none'
-    $hearts.forEach((life) => life.style.display = 'inline-block')
-    frames = 0
-    countriesGuessed = []
-    locationTraveller = 'Canadá'
-    lives = 5
-    level = 1
-    $level.innerHTML = level
-    background.img.src = firstMap
-    background.width = 2398
-    background.height = 1799
-    background.x = countries[0].x
-    background.y = countries[0].y
-    hideClock()
-        // clearCanvas()
-        // background.draw()
-        // traveller.draw()
-    start()
-    hideArrowNext()
-}
+// function tryAgain() {
+//     intervalId = null
+//     $gameOver.style.display = 'none'
+//     $tryAgain.style.display = 'none'
+//     $hearts.forEach((life) => life.style.display = 'inline-block')
+//     frames = 0
+//     countriesGuessed = []
+//     locationTraveller = 'Canadá'
+//     lives = 5
+//     level = 1
+//     $level.innerHTML = level
+//     background.img.src = firstMap
+//     background.width = 2398
+//     background.height = 1799
+//     background.x = countries[0].x
+//     background.y = countries[0].y
+//     hideClock()
+//         clearCanvas()
+//         background.draw()
+//         traveller.draw()
+//     start()
+//     hideArrowNext()
+// }
 
 function win() {
     card.hide()
@@ -268,4 +265,7 @@ function win() {
 
 // Try again event
 
-$tryAgain.onclick = tryAgain
+$tryAgain.onclick = () => {
+    window.location.reload()
+    return false
+}

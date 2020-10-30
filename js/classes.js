@@ -208,24 +208,6 @@ class Card {
 
 
             $buttonLevel3.onclick = () => {
-                let givenAnswer = removeAccents($inputLevel3.value).toLowerCase()
-                if (givenAnswer === correctAnswer && this.level === 4) {
-                    countriesGuessed.unshift(this.country)
-                    hideClock()
-                    $inputLevel3.value = ''
-                    win()
-                } else if (givenAnswer === correctAnswer) {
-                    countriesGuessed.unshift(this.country)
-                    next()
-                    hideClock()
-                    $inputLevel3.value = ''
-                } else {
-                    looseLife()
-                    $inputLevel3.value = ''
-                }
-            }
-            document.onkeydown = e => {
-                if (e.key === 'Enter') {
                     let givenAnswer = removeAccents($inputLevel3.value).toLowerCase()
                     if (givenAnswer === correctAnswer && this.level === 4) {
                         countriesGuessed.unshift(this.country)
@@ -242,7 +224,25 @@ class Card {
                         $inputLevel3.value = ''
                     }
                 }
-            }
+                // document.onkeydown = e => {
+                //     if (e.key === 'Enter' && $card.style.display === 'flex') {
+                //         let givenAnswer = removeAccents($inputLevel3.value).toLowerCase()
+                //         if (givenAnswer === correctAnswer && this.level === 4) {
+                //             countriesGuessed.unshift(this.country)
+                //             hideClock()
+                //             $inputLevel3.value = ''
+                //             win()
+                //         } else if (givenAnswer === correctAnswer) {
+                //             countriesGuessed.unshift(this.country)
+                //             next()
+                //             hideClock()
+                //             $inputLevel3.value = ''
+                //         } else {
+                //             looseLife()
+                //             $inputLevel3.value = ''
+                //         }
+                //     }
+                // }
         }
     }
     hide() {
