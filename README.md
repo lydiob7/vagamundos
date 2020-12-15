@@ -4,7 +4,7 @@
 
 ### Developers: [Gabriela Polanco Ferreyra](https://github.com/gabipolanco) & [Tomas Scattini](https://github.com/Tomasscattini)
 
-![logo_vagamundos](./images/vagamundo.png)
+![logo_vagamundos](./images/readme-banner.jpg)
 
 ### Project description
 
