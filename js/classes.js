@@ -208,7 +208,8 @@ class Card {
             let correctAnswer = removeAccents(this.answer).toLowerCase()
 
 
-            $buttonLevel3.onclick = () => {
+            $buttonLevel3.onclick = (e) => {
+                    e.prenventDefault()
                     let givenAnswer = removeAccents($inputLevel3.value).toLowerCase()
                     if (givenAnswer === correctAnswer && this.level === 4) {
                         countriesGuessed.unshift(this.country)
