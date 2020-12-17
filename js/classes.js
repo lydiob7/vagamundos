@@ -1,9 +1,3 @@
-// This code was writen by Gabriela Polanco Ferreyra (https://github.com/gabipolanco) and Tomas Scattini (https://github.com/Tomasscattini) in October 2020
-
-// Classes for the objects in the game
-
-// MAP
-
 class Map {
     constructor(mapa) {
         this.x = countries[0].x
@@ -43,7 +37,6 @@ class Map {
     }
 }
 
-// PLAYER
 
 class Traveller {
     constructor(player) {
@@ -106,8 +99,6 @@ class Traveller {
         }
     }
 }
-
-// CARDS
 
 class Card {
     constructor(country) {
@@ -226,25 +217,7 @@ class Card {
                         $inputLevel3.value = ''
                     }
                 }
-                // document.onkeydown = e => {
-                //     if (e.key === 'Enter' && $card.style.display === 'flex') {
-                //         let givenAnswer = removeAccents($inputLevel3.value).toLowerCase()
-                //         if (givenAnswer === correctAnswer && this.level === 4) {
-                //             countriesGuessed.unshift(this.country)
-                //             hideClock()
-                //             $inputLevel3.value = ''
-                //             win()
-                //         } else if (givenAnswer === correctAnswer) {
-                //             countriesGuessed.unshift(this.country)
-                //             next()
-                //             hideClock()
-                //             $inputLevel3.value = ''
-                //         } else {
-                //             looseLife()
-                //             $inputLevel3.value = ''
-                //         }
-                //     }
-                // }
+              
         }
     }
     hide() {

@@ -1,7 +1,3 @@
-// This code was writen by Gabriela Polanco Ferreyra (https://github.com/gabipolanco) and Tomas Scattini (https://github.com/Tomasscattini) in October 2020
-
-// Variables
-
 let intervalId
 let intervalLevel
 let timerMaquina
@@ -9,9 +5,7 @@ let frames = 0
 let keys = []
 let countdown
 let countriesGuessed = []
-    // let countriesGuessed = ['Costa Rica']
 let locationTraveller = 'Canadá'
-    // let locationTraveller = 'Panamá'
 let nextDestination
 let lives = 5
 let level = 1
@@ -25,8 +19,6 @@ const imgBernard = `../images/Bernard.png`
 let traveller
 
 
-// Events for the first sections
-
 $startButton.onclick = changeSection
 $instructionsButton.onclick = showInstructions
 $siguienteButton.onclick = nextIntstuctions
@@ -35,8 +27,6 @@ $thirdButton.onclick = changeSection3
 $bernardButton.onclick = changeSection3
 $naima.onclick = naimaCard
 $bernard.onclick = bernardCard
-
-// Events for the second part 
 
 $volverAJugar.onclick = () => {
     window.location.reload()
@@ -107,8 +97,6 @@ function maquina(contenedor, texto, intervalo) {
     }, intervalo);
 };
 
-// UPDATE FUNCTION
-
 function update() {
     frames += 1
     checkKeys()
@@ -118,8 +106,6 @@ function update() {
     background.draw()
     traveller.draw()
 }
-
-// General functions
 
 function clearCanvas() {
     ctx.fillStyle = backgroundCanvas
@@ -213,7 +199,6 @@ function checkProgress() {
         level = 2
         $level.innerHTML = level
     } else if (countriesGuessed[0] === 'Panamá' && level !== 3) {
-        // } else if (countriesGuessed[0] === 'Costa Rica' && level !== 3) {
         background.img.src = '../images/americadelsur.jpg'
         backgroundCanvas = '#80a1c2'
         background.x = 0
@@ -263,10 +248,5 @@ function win() {
     $winSection.style.display = 'flex'
 }
 
-// Try again event
 
 $tryAgain.onclick = tryAgain
-    // () => {
-    //     window.location.reload()
-    //     return false
-    // }

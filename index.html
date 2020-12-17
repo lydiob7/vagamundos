@@ -1,5 +1,3 @@
-<!-- This code was writen by Gabriela Polanco Ferreyra (https://github.com/gabipolanco) and Tomas Scattini (https://github.com/Tomasscattini) in October 2020 -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +11,6 @@
 
 <body>
 
-    <!-- COVER PAGE -->
 
     <div class="container-cover">
         <img id="portada" src="images/vagamundo.png" alt="cover">
@@ -21,7 +18,6 @@
 
     </div>
 
-    <!-- RULES OF THE GAME -->
 
     <div class="container-rules">
         <img id="introduction" src="images/introduction.png" alt="Introduction">
@@ -34,11 +30,9 @@
     <div class="container-rules2">
         <img id="rules2" src="images/comandos.png" alt="Comandos">
         <h2 id="subtitle"></h2>
-        <!-- <div id="maquina-de-escribir"></div> -->
         <button class="btn" id="secondbutton">ELEGÍ TU VIAJER@</button>
     </div>
 
-    <!-- CHARACTERS -->
 
     <div class="container-characters">
         <img id="naima-char" src="images/naima.png" alt="Naima">
@@ -57,29 +51,21 @@
         <button class="btn" id="bernardbutton">VIAJAR CON BERNARD</button>
     </div>
 
-    <!-- GAME -->
 
     <div id="container-game">
 
-        <!-- Canvas -->
 
         <canvas id="canvas" width="1000" height="600"></canvas>
-
-        <!-- Card -->
 
         <div id="objects-over-canvas">
             <div id="card">
                 <h2 id="question">¿Cuál es la capital de <span id="country"></span>?</h2>
-
-                <!-- buttons for the first level cards -->
 
                 <div id="buttons-level1">
                     <button class="answer-btn answer-level1"></button>
                     <button class="answer-btn answer-level1"></button>
                     <button class="answer-btn answer-level1"></button>
                 </div>
-
-                <!-- buttons for the second level cards -->
 
                 <div id="buttons-level2">
                     <button class="answer-btn answer-level2"></button>
@@ -98,7 +84,6 @@
         </div>
 
         <div id="objects-outside-canvas">
-            <!-- Lives -->
 
             <p>Brújulas:</p>
             <div id="lives">
@@ -119,8 +104,6 @@
 
             <button class="btn" id="try-again">VOLVER A EMPEZAR</button>
 
-            <!-- Instructions and signs -->
-
             <div id="arrow-next">
                 <h3>Camina hacia tu próximo destino! <br> (Presiona la barra espaciadora)<br><span>|_______|</span> </h3>
             </div>
@@ -133,8 +116,6 @@
                 <p>Nivel: <span></span></p>
             </div>
         </div>
-
-        <!-- Game over -->
 
         <div id="game-over">
             <h2>Game over</h2>
@@ -152,8 +133,6 @@
         </div>
         <button class="btn" id="lastbutton">VOLVER A VIAJAR</button>
     </div>
-
-    <!-- Scripts -->
 
     <script src="js/canvas.js"></script>
     <script src="js/countries.js"></script>

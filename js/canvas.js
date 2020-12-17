@@ -1,7 +1,3 @@
-// This code was writen by Gabriela Polanco Ferreyra (https://github.com/gabipolanco) and Tomas Scattini (https://github.com/Tomasscattini) in October 2020
-
-// All the elements from the HTML to be used in the game
-
 const $canvas = document.querySelector('#canvas')
 const ctx = $canvas.getContext('2d')
 
